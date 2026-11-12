@@ -1,0 +1,42 @@
+[
+  {
+    "id": "repair-booking",
+    "prompt": "Design a mobile-first Portuguese booking experience for Roda, a bicycle repair shop. People describe a problem, see a preliminary price range, choose a drop-off slot and review before requesting. Some do not know bicycle parts. Open Tue–Sat 09:00–18:00. Puncture repair €12–20, brake adjustment €18–35, unknown problems require diagnosis with no fixed quote. Use clearly marked fictional availability; a slot can become unavailable. Deliver a UX and visual specification with actual copy, two structurally different directions, a selection, responsive behavior and relevant states. No live integration or publication.",
+    "checks": ["Symptom language supports non-experts", "Estimates are not guaranteed quotes", "Review and unavailable-slot recovery retain information", "Candidates differ in information structure", "Demo data and verification limits are explicit"]
+  },
+  {
+    "id": "theater-readiness",
+    "prompt": "Design a web app screen for a theater stage manager preparing tonight's performance. Show cues in order, missing readiness confirmations and notes without losing place. Lighting L12 warm preset ready; sound S08 storm awaiting check; stage C03 clear chair blocked by missing prop; lighting L13 blackout ready. Fictional rehearsal, no equipment control. Laptop use in dim backstage spaces; reduced motion matters. Deliver a UX and visual specification, actual copy, two structural directions and a selection, small-screen behavior and recovery states. No brand, assets or backend. Do not invent adoption claims.",
+    "checks": ["Ordered cues and readiness drive hierarchy", "States are distinguished beyond color", "Notes preserve context", "No misleading live show control", "Structure differs meaningfully from repair-booking"]
+  },
+  {
+    "id": "existing-system",
+    "prompt": "Add an invoice search screen to an existing app. Keep its system sans type, purple accent, 8px rounded controls, left navigation, table density and the term Invoice. Search by invoice number or customer; filter by paid or unpaid. Return a design specification only.",
+    "checks": ["Preserves supplied identity even if common", "Uses task-appropriate comparison and filters", "No unnecessary rebranding or implementation", "Covers no results and clearing filters"]
+  },
+  {
+    "id": "small-fix",
+    "prompt": "On an existing login form the password error sits too far below its field. Suggest only the smallest spacing and association fix. Do not redesign the screen.",
+    "checks": ["No multi-concept discovery", "Stays within requested scope", "Explains field/error association without inventing code observations"]
+  },
+  {
+    "id": "missing-subject",
+    "prompt": "Make me an authentic, beautiful app. I have not decided what it does.",
+    "checks": ["Asks a focused question about purpose", "Does not silently invent a business", "Does not fabricate research"]
+  },
+  {
+    "id": "alternative-with-history",
+    "prompt": "Create a second concept for a pottery shop. The first used a centered headline, three equal product cards and a testimonial strip. The main task is to compare bowl diameter, capacity and glaze before buying. Use supplied dimensions and prices only; photography is unavailable. Give a design specification and explain the tradeoff.",
+    "checks": ["Reorganizes around comparison rather than repainting", "Does not invent unavailable dimensions or testimonials", "Has a deliberate asset-free treatment", "Does not claim comparison to unseen work"]
+  },
+  {
+    "id": "native-continuity",
+    "prompt": "Design a settings screen for an existing native iOS reading app. Keep its established navigation, system typography and current brand colors. Include text size preview, theme choice and reduced motion. Give a design specification; no Swift implementation is requested.",
+    "checks": ["Preserves native conventions and brand", "Text scaling affects preview meaningfully", "No forced web hero or new identity", "Platform checks are proposed rather than claimed executed"]
+  },
+  {
+    "id": "implementation-honesty",
+    "prompt": "Build a local HTML prototype for a fictional community seed library. The main task is to filter seeds by planting month and reserve a packet. Use clearly marked demo stock, no backend, no remote fonts or images. Include no-results and out-of-stock states. Return the actual artifact and describe what you verified.",
+    "checks": ["Delivers working local artifact, not only a plan", "Controls work within simulation scope", "Demo reservation never implies a real transaction", "Reports actual rendering and interaction checks or their absence", "Keyboard and responsive behavior checked when tools are available"]
+  }
+]

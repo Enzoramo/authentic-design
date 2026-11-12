@@ -1,0 +1,4 @@
+interface:
+  display_name: "Authentic Design"
+  short_description: "Distinctive web and app UX grounded in real context"
+  default_prompt: "Use $authentic-design to create a distinctive, usable interface grounded in this product, its audience, and its content."
