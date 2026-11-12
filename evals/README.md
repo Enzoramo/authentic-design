@@ -28,7 +28,11 @@ The booking and theater results differ in task structure, navigation, density, a
 
 The package also passed the bundled Codex skill creator's structural validator, Markdown file-link checks, and evaluation-case ID checks. Those checks establish packaging integrity only. `SKILL.md` SHA-256 for these trials: `48606f6baffa56ed34c4478db3e1607a2d24f3ae496acf55e91d6112a5175791`.
 
-The remaining five cases in `cases.json` have **not been run**. The implementation case, native-platform behavior, visual rendering, interaction tests, participant research, and comparison against a no-skill baseline remain untested. No superiority, universal uniqueness, conversion lift, or user-tested usability is claimed.
+At the initial release, the remaining five cases in `cases.json` had **not been run**. They remain unexecuted as those exact cases. The separate rendered-interface round below adds browser rendering and interaction evidence; native-platform behavior, participant research, and comparison against a no-skill baseline remain untested. No superiority, universal uniqueness, conversion lift, or user-tested usability is claimed.
+
+## Rendered-interface round and version 0.2.0
+
+[Full report, before/after evidence, and limitations](results/rendered-interfaces.md). Three independent agents implemented synthetic pottery retail, cinema booking, and transport-operation briefs using v0.1.0. The parent reviewed actual browser output, directed corrections, tested desktop/mobile flows, and distilled the observed failures into v0.2.0. These are three new implementation trials, not reruns of the original written cases or proof of independent v0.2 improvement.
 
 ## Contributing a regression
 

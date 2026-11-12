@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eeece4">
+  <meta name="description" content="Margem, cinema de bairro. Explore uma programação fictícia e experimente reservar um lugar.">
+  <title>Margem — cinema de bairro</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a href="#programacao" class="skip-link">Saltar para a programação</a>
+  <div class="demo-strip"><span class="demo-dot" aria-hidden="true"></span>Um cinema fictício. Uma reserva de demonstração.</div>
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="#" class="wordmark" aria-label="Margem, início">margem<span aria-hidden="true">.</span></a>
+      <p class="brand-description">cinema independente<br>de bairro</p>
+      <a class="header-link" href="#visita">Antes da sessão <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="programme-heading" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">LUZ APAGADA. OLHOS ABERTOS.</p>
+          <h1 id="page-title">O cinema<br>é aqui.</h1>
+        </div>
+        <div class="edition">
+          <p class="eyebrow">PROGRAMA DA SEMANA</p>
+          <p class="edition-dates">12<span aria-hidden="true">—</span><span class="sr-only"> a </span>14</p>
+          <div class="edition-month"><span>NOVEMBRO</span><span>2026</span></div>
+          <p class="edition-note">Três filmes. Três dias.<br>Um lugar para cada olhar.</p>
+        </div>
+      </section>
+
+      <section id="programacao" class="programme" aria-labelledby="programme-title">
+        <div class="section-label"><h2 id="programme-title">Escolha o seu dia</h2><span>ENTRADA ÚNICA <strong>6 €</strong></span></div>
+        <div class="day-picker" role="group" aria-label="Dia da programação">
+          <button class="day-button active" type="button" data-day="thu" aria-pressed="true"><span class="day-number">12</span><span class="day-label">Quinta-feira<small>3 sessões</small></span><span class="day-arrow" aria-hidden="true">↗</span></button>
+          <button class="day-button" type="button" data-day="fri" aria-pressed="false"><span class="day-number">13</span><span class="day-label">Sexta-feira<small>3 sessões</small></span><span class="day-arrow" aria-hidden="true">↗</span></button>
+          <button class="day-button" type="button" data-day="sat" aria-pressed="false"><span class="day-number">14</span><span class="day-label">Sábado<small>3 sessões</small></span><span class="day-arrow" aria-hidden="true">↗</span></button>
+        </div>
+        <div class="programme-caption"><p id="selected-day-label">Quinta-feira, 12 de novembro</p><span>HORAS LOCAIS</span></div>
+        <p class="sr-only" id="programme-status" role="status" aria-live="polite"></p>
+        <div id="film-list" class="film-list"></div>
+        <noscript><p>Ative o JavaScript para experimentar a reserva. Quinta, 12: Maré baixa às 18:30 e 21:00; A cidade que escuta às 19:15. Sexta, 13: Depois da chuva às 17:00 e 19:00; Maré baixa às 20:00. Sábado, 14: Depois da chuva às 16:00; A cidade que escuta às 18:00; Maré baixa às 21:00, esgotado.</p></noscript>
+      </section>
+
+      <section id="visita" class="visit-note" aria-labelledby="visit-title">
+        <div class="visit-heading"><span class="asterisk" aria-hidden="true">✳</span><h2 id="visit-title">Uma cadeira.<br>Um outro mundo.</h2></div>
+        <div class="visit-details"><h3>Antes de se sentar</h3><p>Escolha um horário, encontre o seu lugar na sala e experimente a reserva. Todas as sessões têm entrada única de <strong>6 €</strong>.</p><p class="demo-note">Esta Margem é fictícia. Não há pagamentos, reservas reais ou emissão de bilhetes.</p></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span class="footer-brand">margem.</span><p>Cinema de bairro · Demonstração</p><span>NOV / 2026</span></footer>
+  </div>
+
+  <dialog id="film-dialog" class="film-dialog" aria-labelledby="film-dialog-title">
+    <button class="close-button" type="button" data-close="film-dialog" aria-label="Fechar ficha do filme">×</button>
+    <div id="film-dialog-content"></div>
+  </dialog>
+
+  <dialog id="booking-dialog" class="booking-dialog" aria-labelledby="booking-title">
+    <button class="close-button" type="button" data-close="booking-dialog" aria-label="Fechar reserva">×</button>
+    <div id="booking-content"></div>
+  </dialog>
+</body>
+</html>

@@ -17,6 +17,12 @@ Uma skill aberta para criar experiências web e apps a partir do público, do co
 
 Não há paleta fixa, fonte obrigatória ou sorteio de estilos. A diferença precisa fazer sentido para o produto. Criar outra tela do mesmo app, por exemplo, normalmente exige continuidade visual.
 
+## Exemplos renderizados
+
+| Barro · cerâmica | Margem · cinema | Linha · transporte |
+| --- | --- | --- |
+| ![Barro](examples/interface-lab/dist/previews/ceramics.jpg) | ![Margem](examples/interface-lab/dist/previews/cinema.jpg) | ![Linha](examples/interface-lab/dist/previews/transit.jpg) |
+
 ## Instalação
 
 Este repositório já é a pasta da skill. Copie a pasta para o diretório de skills aceito pelo seu agente, mantendo `SKILL.md`, `references/` e `agents/`.
@@ -52,7 +58,7 @@ Forneça conteúdo real, público, tarefa principal, restrições e referências
 
 ## Qualidade e limites
 
-A versão 0.1.0 é uma primeira versão. O [registro de avaliação](evals/README.md) distingue testes executados de cenários apenas propostos. Nenhuma skill garante que toda criação será inédita ou que será a melhor em qualquer situação.
+A versão 0.2.0 incorpora uma rodada com três interfaces renderizadas: cerâmica, cinema e transporte. O [relatório](evals/results/rendered-interfaces.md) mostra antes/depois, verificações e limites. Os [protótipos completos](examples/interface-lab/README.md) podem ser executados localmente. O [registro de avaliação](evals/README.md) distingue testes executados de cenários apenas propostos. Nenhuma skill garante que toda criação será inédita ou que será a melhor em qualquer situação.
 
 Aqui, autenticidade significa escolhas específicas e coerentes. Não significa esconder o uso de IA, copiar a identidade de outro designer ou comprovar originalidade em toda a internet. O resultado depende também do modelo, do briefing, dos materiais e das revisões.
 

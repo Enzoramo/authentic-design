@@ -1,0 +1,240 @@
+@charset "UTF-8";
+:root {
+  --ink:#17283d; --muted:#56677c; --paper:#f0f3f7; --white:#fff;
+  --line:#d4dce6; --blue:#155bc7; --blue-dark:#10428f; --blue-soft:#eaf1fc;
+  --amber:#875400; --amber-soft:#fff2d6; --green:#176044; --green-soft:#eaf5ef;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+}
+* {box-sizing:border-box}
+body {margin:0;background:var(--paper);color:var(--ink);font:14px/1.45 var(--font)}
+button,input {font:inherit}
+button {cursor:pointer;color:inherit}
+button:disabled {cursor:not-allowed}
+button,a,input {touch-action:manipulation}
+button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visible {outline:3px solid var(--blue);outline-offset:3px}
+h1,h2,h3,p {margin:0}
+svg {display:block}
+.icon-definitions {position:absolute;width:0;height:0;overflow:hidden}
+.icon {width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.sr-only {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link {position:fixed;top:-80px;left:20px;padding:12px;background:var(--ink);color:white;z-index:20}
+.skip-link:focus {top:12px}
+.app-header {height:60px;padding:0 28px;display:flex;align-items:center;gap:24px;background:#fff;border-bottom:1px solid var(--line)}
+.brand {font-weight:780;font-size:30px;letter-spacing:-1.4px;display:flex;align-items:center;gap:10px;color:var(--blue)}
+.brand-stop {margin-left:-10px}
+.brand-mark {display:flex;gap:3px;transform:skewX(-22deg);margin-right:3px}
+.brand-mark i {display:block;height:22px;width:5px;background:var(--blue)}
+.brand-mark i:nth-child(2) {height:16px;align-self:flex-end}
+.brand-mark i:last-child {height:10px;align-self:flex-end}
+.header-section {font-size:13px;font-weight:550;border-left:1px solid var(--line);padding-left:24px}
+.simulation-tag {margin-left:auto;border:1px solid #aab9cc;border-radius:4px;font-size:12px;font-weight:550;padding:4px 9px;color:var(--muted)}
+.scenario-clock {display:flex;gap:8px;align-items:baseline}
+.scenario-clock strong {font-family:var(--mono);font-size:18px;font-weight:500;line-height:1.2}
+.scenario-clock span {font-size:11px;color:var(--muted)}
+main {max-width:1600px;margin:0 auto;padding:18px 28px 24px}
+.shift-toolbar {display:flex;align-items:center;justify-content:space-between;gap:24px}
+.shift-title {display:flex;align-items:baseline;gap:15px}
+h1 {font-size:22px;font-weight:650;letter-spacing:-.6px;line-height:1.3}
+.shift-title>span {font-family:var(--mono);font-size:12px;color:var(--muted)}
+.shift-summary {display:flex;gap:20px;font-size:13px;color:var(--muted)}
+.shift-summary>span {white-space:nowrap}
+.shift-summary strong {font-family:var(--mono);font-size:15px;font-weight:600;color:var(--ink);margin-right:4px}
+.shift-summary .summary-delay,.shift-summary .summary-delay strong {color:var(--amber)}
+.simulation-notice {font-size:12px;line-height:1.5;color:var(--muted);margin:9px 0 17px}
+.workspace {display:grid;grid-template-columns:400px minmax(0,1fr);gap:24px;align-items:start}
+.fleet-panel {min-width:0;scroll-margin-top:15px}
+.panel-heading {margin-bottom:10px}
+.panel-heading h2 {font-size:17px;font-weight:650;letter-spacing:-.25px}
+.filters {display:flex;border-bottom:1px solid var(--line);margin-bottom:14px;gap:24px}
+.filters button {border:0;background:transparent;display:flex;align-items:center;gap:8px;padding:6px 0 10px;position:relative;color:var(--muted);font-weight:600;font-size:13px;min-height:40px}
+.filters button[aria-pressed=true] {color:var(--blue)}
+.filters button[aria-pressed=true]:after {content:"";position:absolute;bottom:-1px;left:0;right:0;height:3px;background:var(--blue)}
+.filters button span {font-family:var(--mono);font-size:11px;background:#e1e7ef;padding:1px 5px;border-radius:3px}
+.filters button[aria-pressed=true] span {background:var(--blue);color:white}
+.fleet-columns {display:grid;grid-template-columns:minmax(0,1fr) 56px 84px;gap:8px;margin:0 14px 8px;font-size:11px;letter-spacing:.4px;color:var(--muted);font-weight:600}
+.fleet-columns>span:nth-child(n+2) {text-align:right}
+.fleet-list {list-style:none;margin:0;padding:0;background:white;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.fleet-list li+li {border-top:1px solid var(--line)}
+.vehicle-row {position:relative;width:100%;text-align:left;display:grid;grid-template-columns:minmax(0,1fr) 56px 84px;gap:8px;align-items:center;padding:14px 13px;background:white;border:0;min-height:98px}
+.vehicle-row:hover {background:#f5f8fd}
+.vehicle-row[aria-pressed=true] {background:var(--blue-soft);box-shadow:inset 4px 0 var(--blue)}
+.vehicle-row:focus-visible {outline-offset:-4px;z-index:1}
+.vehicle-main {display:flex;gap:10px;align-items:flex-start;min-width:0}
+.route-badge {display:inline-flex;align-items:center;justify-content:center;width:33px;height:30px;border:1px solid #a9bcda;color:var(--blue-dark);font-family:var(--mono);font-size:15px;font-weight:600;border-radius:4px;background:#f5f8fd;flex-shrink:0}
+.vehicle-row[aria-pressed=true] .route-badge {background:var(--blue);border-color:var(--blue);color:#fff}
+.vehicle-destination {font-size:13px;font-weight:600;line-height:1.45;display:block}
+.route-origin {color:var(--muted);font-size:12px;line-height:1.4;display:block;font-weight:400}
+.vehicle-id {display:block;font-size:12px;color:var(--muted);margin-top:5px}
+.passenger-count {text-align:right;font-family:var(--mono);font-size:16px}
+.vehicle-state {text-align:right;display:flex;align-items:flex-end;flex-direction:column;gap:3px}
+.delay-label {font-family:var(--mono);font-size:14px;font-weight:600;color:var(--amber);white-space:nowrap}
+.ontime-label {font-size:12px;color:var(--green);white-space:nowrap;display:flex;align-items:center;gap:3px}
+.ontime-label .icon {height:14px;width:14px}
+.delay-sub {font-size:11px;color:var(--muted)}
+.assigned-tiny {font-family:var(--mono);font-size:11px;color:var(--green);background:#dceee4;padding:2px 4px;border-radius:2px}
+.activity {margin-top:19px;padding-top:16px;border-top:1px solid var(--line)}
+.activity h3 {font-size:13px;font-weight:600}
+.activity ol {list-style:none;padding:0;margin:12px 0 0;display:grid;gap:12px}
+.activity li {display:flex;align-items:flex-start;gap:10px}
+.activity-marker {width:5px;height:5px;margin:6px 0 0 1px;background:#7b8ca3;flex-shrink:0}
+.activity-time {font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.3px}
+.activity p {font-size:12px;line-height:1.55;margin-top:3px;color:var(--muted)}
+.activity li:first-child:not(:last-child) .activity-marker {background:var(--blue)}
+.detail-panel {background:#fff;border:1px solid var(--line);border-radius:7px;overflow:hidden;scroll-margin-top:14px}
+.return-to-fleet {display:none}
+.route-header {padding:18px 22px;display:flex;gap:14px;align-items:center;border-bottom:1px solid var(--line)}
+.selected-route-badge {background:var(--blue);color:white;width:54px;height:54px;display:flex;align-items:center;justify-content:center;border-radius:5px;font-family:var(--mono);font-size:30px;letter-spacing:-1px;flex-shrink:0}
+.route-title-block {min-width:0;flex:1}
+.route-title-block h2 {font-size:21px;letter-spacing:-.4px;font-weight:650;line-height:1.35}
+.route-title-block h2 span {color:var(--muted);font-weight:400;margin:0 3px}
+.route-description {display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px;margin-top:4px;flex-wrap:wrap}
+.route-description .icon {width:16px;height:16px}
+.route-state {display:flex;align-items:flex-end;flex-direction:column;gap:5px;flex-shrink:0}
+.route-state strong {font-size:13px;font-weight:600;padding:4px 7px;border-radius:4px}
+.route-state .delay {background:var(--amber-soft);color:var(--amber)}
+.route-state .ontime {background:var(--green-soft);color:var(--green)}
+.route-state>span {font-size:13px;color:var(--muted)}
+.schematic {background:#fff;padding:16px 22px 0}
+.schematic-heading {display:flex;align-items:center;justify-content:space-between;gap:12px}
+.schematic-heading h3 {font-size:13px;font-weight:600}
+.schematic-heading span {font-size:12px;color:var(--muted)}
+.route-svg {width:100%;height:220px;display:block;overflow:visible}
+.route-svg text {font-family:var(--font);fill:var(--ink)}
+.route-svg .stop-name {font-size:14px;font-weight:550}
+.route-svg .vehicle-tag-text {fill:white;font-family:var(--mono);font-size:14px;font-weight:600}
+.route-track-halo {fill:none;stroke:#e5eefc;stroke-width:18;stroke-linecap:round}
+.route-track {fill:none;stroke:var(--blue);stroke-width:5;stroke-linecap:round}
+.stop-dot {fill:#fff;stroke:var(--blue);stroke-width:4}
+.vehicle-marker {fill:var(--blue-dark)}
+.schematic-mobile {display:none}
+.diagram-footer {padding:0 0 14px;color:var(--muted);font-size:12px}
+.reserve-panel {padding:17px 22px 18px;border-top:1px solid var(--line);background:#f6f8fc}
+.reserve-heading h3 {font-size:16px;font-weight:650;letter-spacing:-.2px}
+.reserve-copy {font-size:13px;line-height:1.5;color:var(--muted);margin-top:4px}
+.reserve-form-controls {display:flex;align-items:flex-end;gap:16px;margin-top:11px}
+.spare-options {border:0;padding:0;margin:0;display:flex;gap:10px;flex:1}
+.spare-options legend {font-size:12px;font-weight:600;margin-bottom:7px}
+.spare-option {display:flex;align-items:center;gap:8px;border:1px solid #a5b5ca;border-radius:4px;padding:10px 12px;min-height:44px;background:#fff;cursor:pointer;flex:1}
+.spare-option:has(input:checked) {border-color:var(--blue);box-shadow:0 0 0 1px var(--blue);background:var(--blue-soft)}
+.spare-option:has(input:disabled) {background:#e9edf3;color:var(--muted);cursor:not-allowed;border-color:var(--line)}
+.spare-option input {accent-color:var(--blue);width:17px;height:17px;margin:0}
+.spare-option strong {font-family:var(--mono);font-size:14px;font-weight:600}
+.spare-option small {font-size:12px;color:var(--muted);margin-left:auto}
+.primary-button {border:1px solid var(--blue);background:var(--blue);color:#fff;min-height:44px;padding:10px 15px;display:flex;align-items:center;justify-content:center;gap:14px;border-radius:4px;font-weight:600;font-size:13px;white-space:nowrap}
+.primary-button:hover {background:var(--blue-dark)}
+.primary-button:disabled {background:#dce3ed;color:var(--muted);border-color:#c8d2df}
+.primary-button .icon {width:18px;height:18px}
+.simulation-footnote {font-size:12px;color:var(--muted);margin-top:10px}
+.assignment-result {margin-top:10px;border:1px solid #a6c9b6;border-radius:5px;padding:13px;background:var(--green-soft);display:flex;gap:11px;align-items:flex-start}
+.assignment-result>.icon {color:var(--green);margin-top:1px}
+.assignment-result h4 {margin:0;font-size:14px;font-weight:650;color:var(--green)}
+.assignment-result p {font-size:13px;line-height:1.55;color:#416452;margin-top:4px}
+.assignment-result>div {flex:1}
+.undo-button {border:1px solid #91b49f;border-radius:4px;background:#fff;color:var(--green);display:flex;align-items:center;gap:7px;font-size:13px;padding:8px 11px;min-height:40px;margin-top:10px}
+.undo-button:hover {background:#f5fbf8}
+.undo-button .icon {width:15px;height:15px}
+.normal-state {display:flex;align-items:flex-start;gap:10px;padding:12px 0 3px;font-size:14px;color:var(--green)}
+.normal-state p {margin-top:4px;font-size:13px;color:var(--muted)}
+.no-spares {color:var(--amber);font-size:13px;margin-top:10px}
+@media(max-width:1250px) {
+  .workspace {grid-template-columns:370px minmax(0,1fr);gap:20px}
+  .app-header {padding:0 22px}
+  main {padding-left:22px;padding-right:22px}
+  .route-header {padding:17px 18px;gap:11px}
+  .route-title-block h2 {font-size:19px}
+  .route-description {font-size:12px}
+  .route-state strong,.route-state>span {font-size:12px}
+  .schematic {padding:15px 18px 0}
+  .reserve-panel {padding:16px 18px}
+  .reserve-form-controls {gap:10px}
+  .spare-option {padding:10px;flex-wrap:wrap}
+  .spare-option small {width:100%;margin-left:25px;margin-top:-5px}
+  .primary-button {font-size:12px;padding:12px;gap:8px}
+}
+@media(max-width:1100px) {
+  .shift-toolbar {align-items:flex-start}
+  .shift-title {display:block}
+  .shift-title>span {display:block;margin-top:4px}
+  .shift-summary {gap:14px;flex-wrap:wrap;justify-content:flex-end;padding-top:5px;font-size:12px}
+  .workspace {grid-template-columns:1fr;gap:20px}
+  .fleet-list {display:grid;grid-template-columns:1fr 1fr}
+  .fleet-list li+li {border-top:0}
+  .fleet-list li:nth-child(even) {border-left:1px solid var(--line)}
+  .fleet-list li:nth-child(n+3) {border-top:1px solid var(--line)}
+  .fleet-columns,.activity {display:none}
+  .vehicle-row {min-height:98px;padding:14px 17px}
+  .return-to-fleet {display:flex;align-items:center;gap:8px;margin:13px 18px 0;padding:6px 0;border:0;background:transparent;color:var(--blue-dark);font-size:13px;font-weight:600;min-height:32px}
+  .return-to-fleet .icon {transform:rotate(180deg);width:17px;height:17px}
+  .route-header {padding:12px 18px 17px}
+  .route-title-block h2 {font-size:21px}
+  .route-description,.route-state strong,.route-state>span {font-size:13px}
+  .spare-option {flex-wrap:nowrap}
+  .spare-option small {width:auto;margin-left:auto;margin-top:0}
+  .primary-button {font-size:13px;padding:10px 15px}
+  .route-svg {height:230px}
+}
+@media(max-width:600px) {
+  .app-header {height:58px;padding:0 16px;gap:14px}
+  .brand {font-size:28px}
+  .header-section,.scenario-clock span {display:none}
+  .simulation-tag {font-size:11px;padding:4px 7px}
+  .scenario-clock strong {font-size:17px}
+  main {padding:17px 16px 22px}
+  .shift-toolbar {display:block}
+  .shift-title {display:flex;gap:12px;justify-content:space-between;align-items:baseline}
+  h1 {font-size:21px;letter-spacing:-.5px}
+  .shift-title>span {margin:0;font-size:11px}
+  .shift-summary {justify-content:flex-start;gap:16px;margin-top:9px;padding-top:0;font-size:12px}
+  .shift-summary strong {font-size:14px;margin-right:2px}
+  .simulation-notice {font-size:12px;margin:11px 0 19px;line-height:1.5}
+  .panel-heading h2 {font-size:17px}
+  .filters {margin-bottom:11px}
+  .fleet-list {display:block}
+  .fleet-list li:nth-child(even) {border-left:0}
+  .fleet-list li+li {border-top:1px solid var(--line)}
+  .vehicle-row {min-height:99px;padding:14px 12px;grid-template-columns:minmax(0,1fr) 43px 75px;gap:6px}
+  .vehicle-main {gap:9px}
+  .vehicle-id {font-size:12px}
+  .passenger-count {font-size:15px}
+  .passenger-count:after {content:"pass.";font-family:var(--font);font-size:11px;color:var(--muted);display:block;margin-top:2px}
+  .ontime-label {font-size:12px}
+  .delay-label {font-size:13px}
+  .workspace {gap:20px}
+  .detail-panel {scroll-margin-top:12px}
+  .return-to-fleet {margin:11px 16px 0;font-size:13px;min-height:34px}
+  .route-header {padding:12px 16px 16px;gap:11px;align-items:flex-start;flex-wrap:wrap}
+  .selected-route-badge {width:48px;height:50px;font-size:28px}
+  .route-title-block {flex:1;min-width:170px}
+  .route-title-block h2 {font-size:20px;line-height:1.3}
+  .route-description {font-size:13px;margin-top:6px}
+  .route-state {flex-direction:row;align-items:center;justify-content:space-between;gap:12px;width:100%;margin-top:2px}
+  .route-state strong {font-size:13px;padding:4px 7px}
+  .route-state>span {font-size:13px}
+  .schematic {padding:15px 16px 0}
+  .schematic-heading {align-items:flex-start;gap:10px}
+  .schematic-heading h3 {font-size:13px;line-height:1.4}
+  .schematic-heading span {font-size:11px;max-width:105px;text-align:right}
+  .schematic-desktop {display:none}
+  .schematic-mobile {display:block;height:auto;max-height:340px;margin:8px 0 0}
+  .route-svg .stop-name {font-size:15px}
+  .diagram-footer {font-size:12px;line-height:1.5;padding:3px 0 14px}
+  .reserve-panel {padding:16px}
+  .reserve-heading h3 {font-size:16px}
+  .reserve-copy {font-size:13px;line-height:1.55;margin-top:5px}
+  .reserve-form-controls {display:block;margin-top:12px}
+  .spare-options {gap:10px}
+  .spare-options legend {font-size:12px;margin-bottom:8px}
+  .spare-option {gap:8px;padding:10px;flex-wrap:wrap}
+  .spare-option small {width:100%;margin-left:25px;margin-top:-5px;font-size:12px}
+  .primary-button {width:100%;margin-top:13px;min-height:46px;justify-content:space-between;padding:11px 14px;font-size:13px}
+  .simulation-footnote {font-size:12px;line-height:1.5}
+  .assignment-result {padding:12px 10px;gap:8px}
+  .assignment-result h4 {font-size:14px}
+  .assignment-result p {font-size:13px}
+  .undo-button {min-height:42px}
+  .normal-state p {font-size:13px}
+}
+@media(prefers-reduced-motion:no-preference) {
+  button {transition:background-color .15s,border-color .15s}
+}

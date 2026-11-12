@@ -23,6 +23,12 @@ Exercise the main task and a relevant recovery path. Check navigation, back beha
 
 Screenshots do not replace keyboard or interaction testing. Without a renderer or runtime, inspect what you can and mark visual and interaction verification as incomplete.
 
+Record the actual viewport dimensions from the rendered page. A browser resize request may affect a different tab; a desktop screenshot cannot substantiate a mobile claim. At small widths, inspect the main action and at least one changed state or overlay, not only the top of the page.
+
+Inspect the opening screen before scrolling. In task-oriented tools, excessive titles, summaries, and decorative section markers can push the response out of the workspace. In browsing experiences, assess whether the visible information gives the person a useful next decision. Do not make every page fit one screen; allocate space according to the task.
+
+Check the visual size of decision data in the screenshot, alongside measured contrast. Passing a contrast threshold does not make tiny capacity, price, time, or availability labels comfortable to read. Reduce nonessential copy before shrinking essential information.
+
 ## Accessibility as a constraint
 
 Use applicable WCAG criteria and project requirements for web work. These checks are not a complete conformance audit:
@@ -42,5 +48,7 @@ Consult [primary sources](sources.md) for exact conditions and current platform 
 Ask whether major decisions belong to this brief, hierarchy reflects task priority, and content works without filler decoration. Compare alternatives or authorized prior work when available. Do not infer AI authorship from a style.
 
 Fix task blockers and accessibility failures before cosmetic refinements. Address observed hierarchy, rhythm, or identity problems; recheck affected behavior. If further improvement is speculative, describe a next experiment rather than iterating indefinitely.
+
+When improving the skill from a trial, preserve the original artifact or its revision, record the observed problem, and distinguish an independent first attempt from a reviewer-directed correction. Corrected examples show the repair; they do not by themselves prove that a new skill version will avoid the problem on unseen briefs.
 
 Deliver the artifact and a concise account of checks, observations, and limitations. Distinguish implemented, rendered, interacted with, and tested with participants. Do not award a quality percentage or promise conversion lift without measurements.

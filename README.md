@@ -17,6 +17,14 @@ An open Agent Skill for designing web and app experiences from the product's use
 
 There is no universal palette, required font, mandatory card layout, or random style picker. A restrained utility and an expressive cultural product should not inherit the same composition merely because the agent made both.
 
+## Rendered examples
+
+| Barro · pottery | Margem · cinema | Linha · transit |
+| --- | --- | --- |
+| ![Barro](examples/interface-lab/dist/previews/ceramics.jpg) | ![Margem](examples/interface-lab/dist/previews/cinema.jpg) | ![Linha](examples/interface-lab/dist/previews/transit.jpg) |
+
+[Run the prototypes locally](examples/interface-lab/README.md) · [Read the observed failures and revisions](evals/results/rendered-interfaces.md)
+
 ## Install
 
 This repository is the skill folder: `SKILL.md` is at its root. Copy the folder into the skills directory supported by your agent, preserving `references/` and `agents/`. Consult your host's instructions for discovery and activation.
@@ -67,7 +75,7 @@ Supporting references are read when relevant. The skill does not require loading
 
 ## Validation and limits
 
-Version 0.1.0 is an initial release. See the [evaluation record](evals/README.md) for what was run and what remains untested. Structural validation is not design validation. Written concepts do not establish the quality of a rendered interface, and self-review does not replace participant research.
+Version 0.2.0 incorporates findings from [three rendered interface trials](evals/results/rendered-interfaces.md): product comparison, cinema booking, and transport operations. The report includes before/after screenshots, executable sources, interaction checks, and limitations. See the [evaluation record](evals/README.md) for all runs. Structural validation is not design validation. Written concepts do not establish the quality of a rendered interface, and self-review does not replace participant research.
 
 No skill can guarantee that every result will be unique or objectively the best. Output depends on the model, brief, assets, implementation tools, and feedback. “Authentic” here means specific and coherently reasoned; it does not mean undetectable AI authorship, imitation of a designer, or verified originality across the internet.
 

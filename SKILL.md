@@ -4,7 +4,7 @@ description: Design and improve web and app interfaces with product-specific UX,
 license: MIT
 metadata:
   author: Enzoramo
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Authentic Design
@@ -47,6 +47,8 @@ Name the actual relationships. “Premium, clean, modern” is not a rationale. 
 
 For a selected direction, define only the tokens and rules the interface needs: semantic color roles and usable pairings, type roles and fallbacks, spacing and density, containers, imagery, interaction states, responsive transformations, and motion if useful. Reuse the project's existing system where possible.
 
+Check the direction at two levels: its information model and its visual grammar. Different tasks can still accidentally receive the same type pairing, warm neutral surface, accent color, hairline dividers, and small decorative labels. When comparing independent projects, inspect these combinations together and revisit unsupported carryovers; do not force differences into controls that benefit from convention.
+
 ## Build specificity into the interface
 
 - Let real objects and decisions determine components. Use a table when comparison matters, a sequence when order matters, and grouping when relationships matter. Do not pour every brief into the same hero, feature cards, testimonials, and CTA sequence.
@@ -54,6 +56,7 @@ For a selected direction, define only the tokens and rules the interface needs: 
 - Preserve learned interaction conventions. Labels, links, focus, navigation, dismissal, and form behavior must remain understandable even when the expression is unfamiliar.
 - Use imagery, illustration, and motion when they explain the subject or communicate a state. Source or generate suitable assets with available authorized tools; check actual rights and provenance. When assets are unavailable, build a deliberate typographic or structural alternative and disclose the gap. Never fake assets with broken URLs or imply that an uncreated asset exists.
 - Write actual interface copy in the requested language and locale. Label the result of an action. Keep brand voice in proportion to the user's situation, especially during errors or sensitive tasks.
+- Give decision-critical information enough visual weight: price, capacity, time, availability, status, and recovery actions should not become tiny metadata beneath an impressive heading. Remove slogans, ornamental numbering, and repeated labels that add no information. Keep numbering when it encodes a real sequence or identifier.
 - Make visible controls work within the agreed scope. Identify simulations and missing integrations. Do not create decorative buttons that imply a completed action.
 - Keep the implementation maintainable: semantic controls, shared tokens, meaningful components, appropriate dependencies, and no unnecessary visual machinery.
 
@@ -74,6 +77,8 @@ When earlier work is supplied or project memory is authorized, compare against i
 ## Verify the experience and the result
 
 Read [Review and validation](references/review-and-validation.md) for substantial implementations and audits. Scale checks to the changed surface. If rendering and interaction tools are available, inspect the real output at representative sizes and exercise the main action plus relevant failure or recovery behavior. Screenshots alone do not verify interactions, and source inspection does not establish visual quality.
+
+Inspect the actual opening viewport. For a working tool, keep the current object, its state, and the principal response within the usable workspace at its intended desktop size. For a browseable page, make the first useful choice apparent before spending substantial space on atmosphere. Scrolling can be appropriate; a generic hero must not displace the task by habit. Verify the real viewport dimensions before claiming mobile coverage.
 
 Fix observed blockers, then recheck affected behavior. When tools or data are unavailable, separate implementation from verification and say what remains untested. Do not present self-scoring as proof of usability, accessibility compliance, conversion lift, or originality.
 

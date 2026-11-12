@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14352f">
+  <title>Linha — Controlo do turno</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#fleet">Saltar para os veículos</a>
+  <svg class="icon-definitions" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-bus" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="16" rx="3"/><path d="M5 12h14M8 19v2m8-2v2M9 16h.01M15 16h.01M9 6h6"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="icon-undo" viewBox="0 0 24 24"><path d="m8 4-5 5 5 5M3 9h10a7 7 0 0 1 0 14"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </svg>
+
+  <header class="app-header">
+    <div class="brand" aria-label="Linha"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>linha<span class="brand-stop">.</span></div>
+    <div class="header-divider"></div>
+    <span class="header-section">Controlo do turno</span>
+    <span class="simulation-tag"><span aria-hidden="true"></span>Simulação</span>
+    <div class="scenario-clock"><strong>08:42</strong><span>hora do cenário</span></div>
+  </header>
+
+  <main>
+    <div class="page-heading">
+      <div><p class="eyebrow">CENTRO DE OPERAÇÕES</p><h1>Turno da manhã<span>.</span></h1><p class="subtitle">06:00–14:00 <span aria-hidden="true">/</span> Acompanhe o serviço. Prepare o reforço.</p></div>
+      <div class="shift-summary" aria-label="Resumo do turno">
+        <div><strong>04</strong><span>veículos em serviço</span></div>
+        <div class="summary-delay"><strong>02</strong><span>com atraso</span></div>
+        <div><strong id="available-count">02</strong><span>reservas livres</span></div>
+      </div>
+    </div>
+
+    <div class="simulation-notice"><span class="notice-label">EXERCÍCIO</span><p>Dados fictícios, sem localização em tempo real. As atribuições não enviam ordens e são apagadas ao recarregar a página.</p></div>
+
+    <div class="workspace">
+      <aside class="fleet-panel" id="fleet" aria-labelledby="fleet-title">
+        <div class="panel-heading"><div><p class="eyebrow">01 / ACOMPANHAR</p><h2 id="fleet-title">Veículos do turno</h2></div><span class="count-label">4 veículos</span></div>
+        <div class="filters" aria-label="Filtrar veículos"><button type="button" data-filter="all" aria-pressed="true">Todos <span>4</span></button><button type="button" data-filter="delayed" aria-pressed="false">Com atraso <span>2</span></button></div>
+        <div class="fleet-columns" aria-hidden="true"><span>LINHA / VEÍCULO</span><span>PASSAG.</span><span>ESTADO</span></div>
+        <ul id="fleet-list" class="fleet-list"></ul>
+        <div class="fleet-footer"><span class="info-dot" aria-hidden="true">i</span><p>Selecione um veículo para inspecionar o percurso e preparar uma reserva.</p></div>
+        <section class="activity" aria-labelledby="activity-title"><div class="activity-heading"><h3 id="activity-title">Registo da simulação</h3><span class="log-indicator" aria-hidden="true"></span></div><ol id="activity-list"><li><span class="activity-marker" aria-hidden="true"></span><div><span class="activity-time">INÍCIO DO EXERCÍCIO</span><p>Cenário carregado. Nenhuma reserva atribuída.</p></div></li></ol></section>
+      </aside>
+
+      <section class="detail-panel" id="route-detail" aria-label="Inspeção do veículo selecionado"></section>
+    </div>
+    <footer class="page-footer"><span>LINHA / AMBIENTE DE DEMONSTRAÇÃO</span><span>4 linhas fictícias · 2 autocarros de reserva</span></footer>
+    <div class="sr-only" id="announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f2eb">
+    <meta name="description" content="Uma família de taças de grés, feitas à roda. Explore os três tamanhos da Barro numa demonstração de loja.">
+    <title>Barro — Taças para todos os dias</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#peca">Saltar para a peça</a>
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="Barro, início">barro<span aria-hidden="true">.</span></a>
+      <p class="header-note">Oficina de cerâmica<br><span>Peças para todos os dias</span></p>
+      <button class="bag-toggle" type="button" id="open-bag" aria-haspopup="dialog">
+        <svg width="19" height="21" viewBox="0 0 19 21" fill="none" aria-hidden="true"><path d="M2 6.5h15l1 13H1l1-13Z" stroke="currentColor"/><path d="M5.5 8V4.5a4 4 0 0 1 8 0V8" stroke="currentColor"/></svg>
+        <span>Saco <span id="bag-count">(0)</span></span>
+      </button>
+    </header>
+
+    <main id="peca">
+      <div class="collection-line"><span>01 — A taça</span><span>Grés feito à roda</span></div>
+      <div class="product-layout">
+        <section class="product-visual" aria-label="Fotografia da família de taças">
+          <figure>
+            <div class="photo-surface">
+              <img class="product-photo" src="assets/bowls.png" width="1536" height="1024" alt="Três taças de grés feitas à roda, nos tamanhos pequena, média e grande, com o mesmo vidrado claro cor de aveia.">
+              <span class="photo-label">Uma família, três tamanhos.</span>
+            </div>
+            <figcaption><span>Vidrado aveia</span><span>Pequena · Média · Grande</span></figcaption>
+          </figure>
+          <div class="material-note">
+            <span class="small-label">O gesto e a matéria</span>
+            <p>Grés, mãos e roda.<br>Uma forma simples para voltar à mesa.</p>
+          </div>
+        </section>
+
+        <section class="product-details" aria-labelledby="product-name">
+          <p class="small-label">A coleção do quotidiano</p>
+          <h1 id="product-name">Taça de<br> todos os dias.</h1>
+          <p class="product-description">Para a primeira refeição, para a sopa, para partilhar. Grés feito à roda, com um vidrado claro cor de aveia.</p>
+
+          <form id="product-form">
+            <fieldset class="size-picker">
+              <legend>Encontre o seu tamanho</legend>
+              <div class="size-options">
+                <label class="size-option">
+                  <input type="radio" name="size" value="small">
+                  <span class="radio-mark" aria-hidden="true"></span>
+                  <span class="size-description"><span class="size-name">Pequena</span><span class="size-measures">Ø 12 cm <span aria-hidden="true">/</span> 350 ml</span></span>
+                  <span class="size-price">24 €</span>
+                </label>
+                <label class="size-option">
+                  <input type="radio" name="size" value="medium" checked>
+                  <span class="radio-mark" aria-hidden="true"></span>
+                  <span class="size-description"><span class="size-name">Média</span><span class="size-measures">Ø 17 cm <span aria-hidden="true">/</span> 700 ml</span></span>
+                  <span class="size-price">34 €</span>
+                </label>
+                <label class="size-option unavailable">
+                  <input type="radio" name="size" value="large" disabled>
+                  <span class="radio-mark" aria-hidden="true"></span>
+                  <span class="size-description"><span class="size-name">Grande <span class="availability">Indisponível</span></span><span class="size-measures">Ø 22 cm <span aria-hidden="true">/</span> 1,2 L</span></span>
+                  <span class="size-price">46 €</span>
+                </label>
+              </div>
+            </fieldset>
+            <button class="add-button" type="submit"><span>Adicionar ao saco</span><span id="selected-price">34 €</span><svg width="20" height="18" viewBox="0 0 20 18" fill="none" aria-hidden="true"><path d="M1 9h17M11 2l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg></button>
+            <p class="selection-note" id="selection-note">Média · Ø 17 cm · 700 ml</p>
+          </form>
+
+          <dl class="piece-facts">
+            <div><dt>Material</dt><dd>Grés</dd></div>
+            <div><dt>Acabamento</dt><dd>Vidrado aveia</dd></div>
+            <div><dt>Processo</dt><dd>Feita à roda, à mão</dd></div>
+          </dl>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Feita para fazer parte.</p>
+      <p class="demo-note">Barro é uma oficina fictícia. Demonstração sem pagamentos ou encomendas.</p>
+    </footer>
+    <dialog id="bag-dialog" aria-labelledby="bag-title">
+      <div class="bag-panel">
+        <header class="bag-header"><div><p class="small-label">As suas peças</p><h2 id="bag-title">O seu saco<span id="dialog-count"></span></h2></div><button type="button" class="icon-button" id="close-bag" aria-label="Fechar saco"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="m5 5 12 12M17 5 5 17" stroke="currentColor" stroke-width="1.5"/></svg></button></header>
+        <p class="sr-only" id="announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div class="bag-content" id="bag-content"></div>
+        <footer class="bag-footer">
+          <div class="bag-total" id="bag-total-row"><span>Total</span><strong id="bag-total">0 €</strong></div>
+          <p class="bag-demo">Este é um saco de demonstração.<br>Não cria uma encomenda.</p>
+          <button type="button" class="continue-button" id="continue-shopping">Continuar a escolher <span aria-hidden="true">↗</span></button>
+        </footer>
+      </div>
+    </dialog>
+  </body>
+</html>
