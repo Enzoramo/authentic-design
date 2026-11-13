@@ -36,7 +36,11 @@ At the initial release, the remaining five cases in `cases.json` had **not been 
 
 ## Independent v0.2 round
 
-[Report and original screenshots](results/independent-v02.md), 2026-11-13. Three fresh contexts implemented oral-history reading, cooking assistance and French practice from functional briefs. No extra style direction or post-submission corrections were given. Browser checks covered desktop and 390/320 px. The outputs differed in task model and responsive behavior, but repeated a cool pale surface / dark blue ink / strong sans-serif visual family. v0.2 is unchanged; all submitted files and input hashes are preserved. This is not a matched v0.1 or no-skill comparison.
+[Report and original screenshots](results/independent-v02.md), 2026-11-13. Three fresh contexts implemented oral-history reading, cooking assistance and French practice from functional briefs. No extra style direction or post-submission corrections were given. Browser checks covered desktop and 390/320 px. The outputs differed in task model and responsive behavior, but repeated a cool pale surface / dark blue ink / strong sans-serif visual family. The archived v0.2 snapshot is unchanged; all submitted files and input hashes are preserved. This is not a matched v0.1 or no-skill comparison.
+
+## Independent v0.3 round
+
+[Report and original screenshots](results/independent-v03.md), 2026-11-13. Three fresh contexts implemented knitting progress, seed exchange and observation logging. Frozen v0.3, functional briefs only, no post-submission edits. All created visible direction studies (3/3/2); selected relationships carried into the prototypes and tested flows worked. Visual diversity was partial: the knitting and seed apps converged on cream/green/Georgia; all used related serif wordmarks and small-label conventions. Desktop and 390/320 px evidence is preserved. No controlled improvement claim.
 
 ## Contributing a regression
 

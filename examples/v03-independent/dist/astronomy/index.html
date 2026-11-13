@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171e23">
+  <meta name="description" content="Zênite, um caderno de demonstração para registrar uma noite de observação do céu.">
+  <title>Zênite — Caderno de sessão</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="core.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Ir para o caderno</a>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Zênite, início"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26L26 6"/><circle cx="16" cy="16" r="7"/></svg>zênite<span class="brand-dot">.</span></a>
+      <span class="brand-description">CADERNO DE<br>OBSERVAÇÃO</span>
+      <nav class="view-nav" aria-label="Visualização da sessão">
+        <button type="button" data-view="notebook" aria-current="page">Caderno</button>
+        <button type="button" data-view="summary">Resumo<span id="summary-count" class="nav-count">0</span></button>
+      </nav>
+    </header>
+
+    <section class="session-heading" aria-labelledby="session-title">
+      <div>
+        <p class="eyebrow">SESSÃO DO CLUBE <span class="demo-tag">DEMONSTRAÇÃO</span></p>
+        <h1 id="session-title">14 de novembro<span class="date-point" aria-hidden="true"> / </span><span class="place">Pátio do clube</span></h1>
+        <p class="demo-note">Sessão fictícia. Horários ilustrativos, não são previsões astronômicas.</p>
+      </div>
+      <div class="session-progress" aria-label="Progresso da sessão">
+        <div class="progress-label"><span><strong id="done-count">0</strong> de 4 registrados</span><span id="progress-percent">0%</span></div>
+        <div class="progress-track" id="progress-track" aria-hidden="true"></div>
+        <p id="pending-copy">4 alvos à espera de um registro</p>
+      </div>
+    </section>
+
+    <p id="storage-warning" class="storage-warning" role="alert" hidden></p>
+    <main id="workspace" tabindex="-1">
+      <div id="notebook-view" class="notebook">
+        <section class="plan" aria-labelledby="plan-title">
+          <div class="section-heading"><h2 id="plan-title">Roteiro da noite</h2><span id="filtered-count" class="small-label">4 ALVOS</span></div>
+          <div class="filters">
+            <label>Tipo<select id="type-filter"><option value="all">Todos os tipos</option><option value="satellite">Satélite</option><option value="planet">Planeta</option><option value="nebula">Nebulosa</option><option value="cluster">Aglomerado</option></select></label>
+            <label>Estado<select id="status-filter"><option value="all">Todos os estados</option><option value="pending">Pendente</option><option value="seen">Visto</option><option value="unseen">Não visto</option></select></label>
+          </div>
+          <div id="target-list" class="target-list" aria-label="Alvos da sessão"></div>
+          <div id="list-empty" class="empty-list" hidden><span aria-hidden="true">∅</span><h3>Nenhum alvo neste filtro</h3><p>Combine outro tipo ou estado para continuar.</p><button id="clear-filters" class="text-button" type="button">Limpar filtros</button></div>
+          <div class="plan-foot"><span class="schedule-line" aria-hidden="true"></span><p>Uma sequência para a noite.<br>Observe e registre no seu ritmo.</p></div>
+        </section>
+        <section id="target-detail" class="target-detail" aria-label="Registro do alvo selecionado"></section>
+      </div>
+      <section id="summary-view" class="summary-view" aria-labelledby="summary-title" hidden></section>
+    </main>
+    <footer class="footer"><p><span class="local-dot" aria-hidden="true"></span>Registros guardados neste navegador</p><p>Zênite <span aria-hidden="true">/</span> Uma página para cada olhar.</p></footer>
+  </div>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript><p class="noscript">Ative o JavaScript para selecionar alvos e salvar observações.</p></noscript>
+</body>
+</html>

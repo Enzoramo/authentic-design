@@ -45,7 +45,9 @@ Consult [primary sources](sources.md) for exact conditions and current platform 
 
 ## Review identity and finish
 
-Ask whether major decisions belong to this brief, hierarchy reflects task priority, and content works without filler decoration. Compare alternatives or authorized prior work when available. Do not infer AI authorship from a style.
+Ask whether major decisions belong to this brief, hierarchy reflects task priority, and content works without filler decoration. For a fresh identity, inspect the visual study and the implementation side by side. Distinguish a genuinely different visual treatment from a different task flow inside the same shell. Check type silhouette, rhythm, surface relationships and graphic treatment after ignoring the product name and accent. A small icon or a changed color alone is weak evidence of identity.
+
+Verify that the selected direction survives a second useful state and the responsive layout. Compare against authorized prior work when available; assess same-product consistency separately. Record the visible evidence and any recurring defaults. Do not infer AI authorship from a style.
 
 Fix task blockers and accessibility failures before cosmetic refinements. Address observed hierarchy, rhythm, or identity problems; recheck affected behavior. If further improvement is speculative, describe a next experiment rather than iterating indefinitely.
 

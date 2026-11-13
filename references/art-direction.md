@@ -1,56 +1,64 @@
 # Art direction from the brief
 
-Use for new identities, substantial redesigns, or alternatives. Do not rotate through a catalog of fashionable presets.
+Use for fresh identities, substantial redesigns or meaningful alternatives. Preserve fixed references and existing product systems. The objective is a coherent visual language that belongs to this product, not a rotating catalog of fashionable styles.
 
-## Extract material, not stereotypes
+## Separate function from visual identity
 
-Look for evidence in the subject's content, practices, tools, physical artifacts, vocabulary, environment, and existing identity. A service used in sunlight may need strong contrast and generous controls. A collection may need comparisons of scale and material. These are inputs; “luxury means serif” and “technology means neon” are untested associations.
+First establish the task, content and familiar controls that must work. A searchable list, a sequence and a questionnaire are different interaction models, but all can inherit the same visual shell. Do not count a change of navigation model as sufficient exploration of identity.
 
-For a useful cue, record:
+Treat the required functional content as a stable basis for visual exploration. Candidates may compose it differently without dropping essential information or inventing features. If the user prescribed the identity, explore only the remaining freedom; a small fix needs no identity exercise.
 
-> Source or observation → implication for the user → possible visual or interaction decision.
+## Find source material with consequences
 
-A cue need not become literal decoration. A repair business's diagnosis process might organize a form; the page need not be covered in wrench icons. Respect cultural context rather than borrowing motifs as generic atmosphere.
+Look in the brief's actual objects, language, practices, environments, constraints and supplied assets. Identify a few concrete cues that could shape expression. Distinguish supplied evidence from invented associations.
 
-If external references would materially help, use authorized browsing or supplied assets. Examine principles such as density, pacing, hierarchy, or feedback. Do not copy another brand's recognizable composition, copy, artwork, or identity. Record influential sources and verify asset licensing separately.
+For each useful cue, connect:
 
-## Diverge in structure
+> Specific source → relationship worth expressing → visual consequence → usability constraint.
 
-Explore a few directions with different organizing ideas. A direction can be quiet; expressiveness does not require maximalism.
+A product category is not a visual rationale. Neither “trustworthy” nor “premium” determines a typeface, palette or layout. Avoid explaining a habitual design after choosing it. A physical reference need not be copied literally; proportion, repetition, sequence, contrast, alignment or annotation may be the useful relationship. Preserve cultural context and avoid stereotypes.
 
-Each candidate should contain the task it prioritizes, its evidence, a rough primary-screen composition, how hierarchy and expression support it, and its main tradeoff. Three themes of the same layout are not three concepts.
+When authorized references would materially help, examine principles rather than copying a brand's recognizable composition, copy or art. Record influential sources and asset provenance. Without reference access, work from available content and label assumptions; do not fabricate research or historical authenticity.
 
-Choose based on the brief, clarity, coherence, feasible assets, and constraints; do not force a numerical winner. If the user supplied a fixed reference, explore only remaining freedom. Faithful implementation can be the right answer.
+## Make visual alternatives observable
 
-## Make the direction operational
+For a substantial fresh identity, create two or three small visual specimens before implementing the full screen. Use the available design medium. In code, a self-contained local `direction-study.html` with comparable candidate sections is enough; no framework or additional service is needed. This is a design-work artifact, not an onboarding step or style picker in the product.
 
-| Axis | Useful decision |
-| --- | --- |
-| Structure | What appears first and why; how the user moves through information |
-| Density and rhythm | What is grouped, what breathes, what stays visible while acting |
-| Typography | Roles, hierarchy, language coverage, fallbacks, available licenses |
-| Color | Semantic roles, actual contrast pairs, state distinctions |
-| Imagery | Subject, purpose, framing, sourcing, crop behavior, alternatives |
-| Geometry | Containers and separators that communicate relationships |
-| Interaction and motion | What changes and why, feedback, reduced-motion behavior |
-| Voice | Vocabulary and tone fitted to the task and audience |
+Use the same short sample in each candidate: actual product/title language, one decision-bearing item, a main control and a relevant state. The purpose is to compare expression on functional content, not mood words. A rough but visible specimen is more useful than three paragraphs that all lead to one default treatment.
 
-Avoid novelty quotas. Changing three arbitrary axes does not prove quality. Choose connected decisions. A system font, standard table, familiar navigation, or brand color can be intentional.
+Give each candidate an organizing visual principle connected to its source material. Explore relationships among:
 
-## Detect habitual composition
+- **Type composition:** the silhouette, measure, hierarchy, alignment, weight, spacing and interaction of labels, prose and data. Typography is more than swapping a font family.
+- **Spatial rhythm:** compactness, intervals, repetition, continuity and the relationship between the whole page and its primary object. Do not let a component library choose this for you.
+- **Surface and color:** what is foreground, background, structural boundary and signal. A palette should implement those relationships, not substitute for them.
+- **Graphic behavior:** how content is framed, annotated, compared, illustrated or revealed. It should survive beyond a decorative logo or hero image.
 
-Compare actual structures: opening hierarchy, repeated card groups, image placement, section order, and interaction models. A palette swap will not resolve structural repetition.
+The candidates need recognizable differences in the relationships that carry their identity. If neutralizing the accent and hiding the candidate names leaves near-duplicates, develop another direction before choosing. No fixed number of changed properties proves distinctiveness, and novelty must not weaken legibility or a learned control.
 
-If the interface is interchangeable, revisit an upstream decision: task priority, primary object, information order, or presentation of evidence. Do not add unusual fonts, broken grids, and motion on top of an unchanged template.
+Do not make every candidate the same generic utility shell with a different decorative layer. A restrained, conventional direction is a valid candidate when the task supports it; choose it for that reason, not simply because it is easiest to code. Do not equate unusual typography or dense ornament with better design.
 
-If usability suffers, move expression toward typography, content composition, image treatment, or secondary surfaces while preserving main controls. Identity must survive ordinary use, small screens, real data, and reduced motion.
+## Select and commit
 
-## Compare the complete visual grammar
+Compare task clarity, fit to the actual material, visible distinction, consistency across states, accessibility and feasible assets. Select the strongest whole rather than averaging all candidates into an anonymous compromise. Record the chosen principle and why a plausible alternative lost. Do not ask the user to choose unless their request or a material unresolved preference calls for it.
 
-A different information model does not automatically produce a different identity. Across authorized examples, compare type roles, surface temperature, accent usage, separators, label treatment, spacing rhythm, image behavior, and opening-screen hierarchy together. A repeated combination across unrelated products is a signal to examine, not proof of AI authorship.
+Write a compact identity rule before building the full interface:
 
-For example, a ceramics shop and a cinema can both be given warm paper, a serif display, terracotta accents, hairlines, and a large lifestyle slogan. Each choice may be defensible alone; the repeated bundle can still be an unexamined studio preset. A useful revision might retain the shop's material-led composition while reorganizing the cinema around its daily program and film billing. Changing only the accent would leave the larger repetition intact.
+> This product expresses [specific relationship] through [connected visual decisions]; supporting UI follows [rules]; [tradeoff] remains.
 
-Use references to identify concrete relationships, not to justify a category stereotype after the fact. A restrained design can be specific, and a system font can be appropriate. The goal is a coherent explanation supported by the artifact, not a quota of unusual choices.
+Name concrete decisions, not adjectives. Keep this in the design record, not the end-user interface.
 
-Inspect the small language around the layout. Eyebrows, collection numbers, poetic captions, arrows, and section labels should each explain context, order, navigation, or content. Remove them when they merely make a page resemble a designed template. Do not ban a legitimate symbol or text treatment across all projects.
+Establish only necessary type roles, color pairings, spacing/density, containers, image/graphic behavior and states. System fonts can support an identity through composition and role; they are not an excuse to repeat one heavyweight heading treatment. Use available, licensed assets and fallbacks. Do not impose a fixed font pair, palette, corner radius or style name across projects.
+
+## Preserve the identity during implementation
+
+Build the defining content relationship first, then supporting components. Compare the implemented screen with the selected specimen. Do not let convenient defaults silently replace its type scale, alignment, rhythm or surface relationships.
+
+A logo, tiny illustration or accent panel cannot carry all the identity while the rest of the screen stays interchangeable. Inspect a second meaningful state and a phone layout. The direction should still be recognizable during ordinary work, long text, errors, empty content and reduced motion. Keep primary controls conventional and readable; move expression into composition or content treatment when interaction novelty causes friction.
+
+Check small recurring signatures too: wordmark construction, punctuation, icon placement, arrows, section labels, rounded containers and spacing patterns. Retain those that communicate something here; remove unsupported defaults. This is an audit of their combined use, not a blacklist of symbols or styles.
+
+## Compare honestly
+
+When previous work is supplied or access is authorized, compare the full grammar: type roles, opening composition, density, surface relationships, accent use, boundaries and graphic behavior. An unrelated product sharing the whole bundle warrants re-examination. A same-product screen generally warrants continuity.
+
+Without history, compare the candidates created for this brief. Do not invent memory, randomize a theme to guarantee difference, or promise uniqueness across unseen projects. A visual study supports a reviewable decision; it does not prove originality or usability with real participants.

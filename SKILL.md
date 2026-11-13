@@ -4,7 +4,7 @@ description: Design and improve web and app interfaces with product-specific UX,
 license: MIT
 metadata:
   author: Enzoramo
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Authentic Design
@@ -37,7 +37,9 @@ Ask only for missing information that materially changes the solution and cannot
 
 For a substantial flow, read [UX and content](references/ux-and-content.md). Establish the main path, the necessary decisions, and the relevant recovery path before polishing screens. Choose information structure from the task: comparison, search, scheduling, reading, monitoring, creation, or something else. A marketing page and a working tool need different structures.
 
-For a fresh identity or a request for meaningful variation, read [Art direction](references/art-direction.md). Explore a small set of plausible directions; two or three usually reveal the tradeoffs. Each direction needs a different organizing idea, not just a different palette. Compare task fit, content fit, recognizability, accessibility, and implementation cost. Select and execute the strongest direction unless the user requested options or approval.
+For a fresh identity or meaningful variation, read [Art direction](references/art-direction.md). Treat the task model and visual identity as separate decisions: a different flow does not establish a different visual character. Once the required task is understood, explore two or three visual directions using the same representative content and controls. Derive each from specific material in the brief, with distinct typographic composition, spatial rhythm or graphic relationships; changing the accent or moving the same card is insufficient.
+
+Before building the full fresh identity, make a compact visual study in the available design medium (for code work, a small local HTML sheet is sufficient). Include real heading, decision data, control and state content so the proposals can be compared; keep it outside the product flow. Choose based on task fit, specificity, visual coherence and feasibility, then carry that visual grammar into the working interface. A prose list of navigation alternatives is not this visual study. For an existing identity or small fix, preserve the system and skip this exploration.
 
 Leave a compact, reviewable decision record, in the response or an existing design document:
 
@@ -47,7 +49,7 @@ Name the actual relationships. “Premium, clean, modern” is not a rationale. 
 
 For a selected direction, define only the tokens and rules the interface needs: semantic color roles and usable pairings, type roles and fallbacks, spacing and density, containers, imagery, interaction states, responsive transformations, and motion if useful. Reuse the project's existing system where possible.
 
-Check the direction at two levels: its information model and its visual grammar. Different tasks can still accidentally receive the same type pairing, warm neutral surface, accent color, hairline dividers, and small decorative labels. When comparing independent projects, inspect these combinations together and revisit unsupported carryovers; do not force differences into controls that benefit from convention.
+Before accepting the chosen identity, remove its name and mentally neutralize the accent: what composition, type treatment, rhythm or subject-specific graphic behavior still identifies it? If only a logo, illustration or colored panel carries the difference, revisit the underlying visual decisions. Test the grammar in a second useful state and on a phone, not just a title screen. Compare against the other candidates even when no previous projects are available. Keep familiar controls; do not force novelty into their behavior.
 
 ## Build specificity into the interface
 
@@ -66,9 +68,10 @@ Before accepting a substantial design, use these probes:
 
 1. **Substitution:** could another product replace the name and images without changing the structure or interactions? If yes, find the missing product decision. Shared conventions alone are not a failure.
 2. **Silhouette:** after ignoring color and decorative details, does this repeat the same hierarchy and composition as the alternatives or available prior work? Revisit the organizing idea when the brief supports a different one.
-3. **Removal:** does removing an effect or ornament make the task clearer without losing useful identity? Remove it.
-4. **Continuity:** did the pursuit of difference break this product's own system or a familiar control? Restore the useful consistency.
-5. **Evidence:** which assertions are checked, inferred, or still unknown? Do not turn a plausible explanation into a user-research finding.
+3. **Visual identity:** do the actual type composition, surface relationships and content treatment express the chosen direction, or has implementation reverted to a generic component shell? Compare the visual study with the artifact.
+4. **Removal:** does removing an effect or ornament make the task clearer without losing useful identity? Remove it.
+5. **Continuity:** did the pursuit of difference break this product's own system or a familiar control? Restore the useful consistency.
+6. **Evidence:** which assertions are checked, inferred, or still unknown? Do not turn a plausible explanation into a user-research finding.
 
 No color, font, radius, grid, gradient, or style is inherently “AI.” Do not replace a recognizable template with a universal anti-template. Keep a familiar choice when the brief justifies it.
 

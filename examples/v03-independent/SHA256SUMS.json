@@ -1,0 +1,35 @@
+{
+  "knitting": {
+    "DESIGN.md": "a82ec23eec8b1689459cc16d9eadb617c518796bbcac27f681126da2e510dcff",
+    "app.js": "107e07312296c46c28d8641266bdc971247da4413cfc739988e91d0b525046de",
+    "core.js": "7a189bfc73583a8405ba67e2949a00adc2cb201c5147e8482069295db4f8b140",
+    "direction-study.html": "07b6d8d48a8af10361e8abf2a8e41655c88eecc9eb3a10ae4fcfbebc332b8a39",
+    "index.html": "45863cc7ac4ebfeb3e64d25be067874295b20b5c8ce7b39b313346c5519edb7d",
+    "styles.css": "6aeecce27a53713b99ccf4b29f1ca2b4cc4fb1db9736db17f71883958075f830",
+    "verification.txt": "471b433b2dc5e652771473fbcf050cadb4e69ffa637bae44c11bd2caeedf00a7",
+    "verify-static.py": "186257a202696d9e72f12b66704a846bbfd291fd354c4ea34cf2ff14b013f0ae",
+    "verify.cjs": "8b2fad80d4dc81e2b90d199fce4640aaeb94c4e710945cbf8b7dcf6537e08850"
+  },
+  "seeds": {
+    "DESIGN.md": "cb4501c1a4b325c771d5121348a643465661fa807f4f5e510de02449967eec59",
+    "app.js": "3148651b732afc0c50c0263ee6d1c33e048a844882ba3277fc63a14f836eccb2",
+    "assets/coentro.svg": "1f051dcea7474e1494f1f699885be8117d344f033494d7c9007844e0e4e1bb39",
+    "assets/girassol.svg": "844a561f925aaa8dd8172c148d4c0bf79fba877ac0de0016b7035672a3095a3f",
+    "assets/manjericao.svg": "2872019ab30d9b0b2d01de6cf21d203feadda90eb31934b026618f4634a8d1e1",
+    "assets/tomate.svg": "b858cdb3d87f6b88ba28d7cf669c1cf4738238d1a79a94860605d3cc507af1e9",
+    "checks.cjs": "a777492f4363a5e5f9bb0bcf40143cc93575400be4e29056327dd5eb6152a889",
+    "direction-study.html": "4736cddfcb8443bb1196cab600837b8cbbd4a5255fffad17f42b0dbd199be015",
+    "index.html": "e4dd7c4122cb81d86ac28ca5dfe3c39d440561cbfde0827be6e924f3334ff61f",
+    "model.js": "0f942234b374bface35857938022414b973e189e7acc09968947b134166278cd",
+    "styles.css": "91f8f19188a1dfec626b151b611a1870c0ce96c54813bbd903f8bf0d05e8871c"
+  },
+  "astronomy": {
+    "DESIGN.md": "b3f89fc11049bb71ea952513334075117d407a4ac3b9747fa7af6d8f67485958",
+    "app.js": "cf8aa9a763d8ce37813c6dfc48069f1420af60dde8051b4f8a6c943f0e24e697",
+    "core.js": "47e4b543165b62d8b0133baf0d5dbfc4368c83b4559b7620e0df483ff6b9f474",
+    "direction-study.html": "2c4ed74d7cf79737a7767cc15b28c383ed3830eb1a8993b17522a15c41b01c0f",
+    "index.html": "1338785d51aa0f0c204d98f078abd67a056db20d11915e7765bd4c897d4fb38a",
+    "styles.css": "b80591b7822b012bf3485b42becec1a75fd9c6e1b492ea21f7817f1ce83f9278",
+    "verify.cjs": "d810ddacc918eb33356d1249f85b76647e86f2a211fb51d70b79e05097c24ef5"
+  }
+}

@@ -1,0 +1,3 @@
+# Prespecified review
+
+Review each original submission at 1440×900 and 390×844; inspect 320 px if needed. Preserve submitted source hashes. Exercise primary task, relevant invalid input/recovery, and persistence. Inspect candidate studies and compare selected direction to working state. Compare all three on type composition, spatial rhythm, surface/color relationships, graphic behavior and task structure. Consider differentiation beyond color; do not score originality numerically. Report defects without silently repairing the original. Functional accessibility checks do not establish compliance. Do not interpret new briefs as a controlled v0.2/v0.3 comparison.

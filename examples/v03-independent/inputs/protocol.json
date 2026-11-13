@@ -1,0 +1,13 @@
+{
+  "version": "0.3.0",
+  "frozen_at": "2026-11-13T03:31:26.191192+00:00",
+  "instruction_sha256": "e8a28dc52ea10c9955421c898828bc6ce10f8cfce804bc596d59c8a777d604a4",
+  "design": "Three fresh independent contexts; functional briefs only; frozen instructions; no parent aesthetic feedback; no cross-project access; no post-submission changes.",
+  "outputs": [
+    "knitting",
+    "seeds",
+    "astronomy"
+  ],
+  "tools": "Static HTML/CSS/JS; source checks by creators; browser rendering and flow checks by evaluator after submission.",
+  "limits": "Unmatched exploratory samples, no no-skill control, participant study or originality proof. Exact model identifiers not captured."
+}

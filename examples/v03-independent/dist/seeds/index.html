@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#294b3a">
+  <meta name="description" content="Quintal: um protótipo de troca comunitária de sementes. Explore lotes fictícios e simule a sua reserva.">
+  <title>Quintal — sementes para partilhar</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="model.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+  <header class="masthead wrap">
+    <a class="brand" href="#sementes" aria-label="Quintal, sementes disponíveis"><svg viewBox="0 0 40 48" aria-hidden="true"><path d="M20 43V22M20 30C5 31 4 19 5 13c12 0 16 8 15 17Zm0-8C19 8 28 4 36 5c1 12-6 17-16 17Z"/></svg>quintal<span class="brand-dot">.</span></a>
+    <span class="brand-description">Troca comunitária<br>de sementes</span>
+    <span class="simulation-label"><span></span> Demonstração local</span>
+  </header>
+  <nav class="navigation wrap" aria-label="Navegação principal">
+    <a href="#sementes" id="catalog-nav" aria-current="page">Sementes disponíveis</a>
+    <a href="#reservas" id="reservations-nav">As minhas reservas <span id="reservation-count" class="nav-count">0</span></a>
+  </nav>
+  <main class="wrap" id="main">
+    <div id="storage-warning" class="notice warning" role="alert" hidden></div>
+    <div id="notification" class="notice" role="status" hidden></div>
+    <section id="catalog-view" aria-labelledby="catalog-title">
+      <div class="page-intro"><div><p class="eyebrow">Do bairro para a sua terra</p><h1 id="catalog-title">O que vai plantar?</h1><p>Escolha as sementes. Confira a retirada e reserve os seus envelopes.</p></div><p class="stock-total"><strong id="total-stock">14</strong><span>envelopes<br>disponíveis</span></p></div>
+      <div class="workspace">
+        <div class="catalog">
+          <form id="filters" class="filters" role="search">
+            <div class="search-field"><label for="search">Procurar sementes</label><div class="input-with-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input type="search" id="search" placeholder="Tomate, manjericão…" autocomplete="off"></div></div>
+            <div class="pickup-field"><label for="pickup-filter">Ponto de retirada</label><select id="pickup-filter"><option value="all">Todos os pontos</option><option value="biblioteca">Biblioteca do bairro</option><option value="horta">Horta da escola</option></select></div>
+          </form>
+          <div class="list-caption"><p id="result-count" aria-live="polite">4 lotes na comunidade</p><span>Por ordem de chegada</span></div>
+          <div id="seed-list" class="seed-list"></div>
+          <div id="no-results" class="empty-results" hidden><h2>Nenhuma semente por aqui.</h2><p>Tente outro nome ou outro ponto de retirada.</p><button id="clear-filters" class="button secondary" type="button">Limpar pesquisa e filtros</button></div>
+        </div>
+        <aside class="sidebar" aria-label="Reservas e pontos de retirada">
+          <section class="your-seeds"><p class="eyebrow">Guardado para si</p><h2>O seu próximo cultivo</h2><div id="reservation-summary"></div></section>
+          <section class="pickup-board"><h2>Pontos de encontro</h2><p class="board-intro">A retirada acontece no bairro.</p><div class="pickup-place"><span class="day">SÁB</span><div><h3>Biblioteca do bairro</h3><p>Sábado · 10–12h</p></div></div><div class="pickup-place"><span class="day">DOM</span><div><h3>Horta da escola</h3><p>Domingo · 9–11h</p></div></div><p class="simulation-note">Neste protótipo, os lotes e as retiradas são fictícios.</p></section>
+        </aside>
+      </div>
+    </section>
+    <section id="reservations-view" aria-labelledby="reservations-title" hidden>
+      <div class="page-intro"><div><p class="eyebrow">O seu próximo cultivo</p><h1 id="reservations-title">As minhas reservas</h1><p>Os seus envelopes, com tudo o que precisa para a retirada.</p></div><a href="#sementes" class="button secondary">Explorar sementes</a></div>
+      <div id="reservations-list" class="reservations-list"></div>
+      <p class="reservations-note">As reservas ficam guardadas apenas neste navegador. Nenhuma pessoa é contactada.</p>
+    </section>
+  </main>
+  <footer class="footer wrap"><span>Uma semente. Muitas possibilidades.</span><p>Quintal · Simulação local, sem pagamento ou conta.</p></footer>
+  <dialog id="reservation-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-top"><span class="eyebrow" id="dialog-step">Escolher quantidade</span><button type="button" class="icon-button" id="close-dialog" aria-label="Fechar reserva">×</button></div>
+    <div id="dialog-content"></div>
+  </dialog>
+  <noscript><p class="noscript">Ative o JavaScript para explorar os lotes e simular reservas. Nenhum dado é enviado.</p></noscript>
+</body>
+</html>

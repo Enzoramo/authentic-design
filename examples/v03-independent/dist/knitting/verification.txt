@@ -1,0 +1,24 @@
+✓ Primeira carreira e sequência de quatro passos
+✓ Toque duplo e limite exato da proteção de 1,4 segundos
+✓ Última carreira exige confirmação explícita
+✓ Saltar para uma carreira marca só as anteriores; desfazer recupera
+✓ Reinício, conclusão e mudança de posição podem ser desfeitos
+✓ Serialização conserva posição, histórico e proteção após recarregar
+✓ Todas as 48 carreiras podem ser desfeitas individualmente
+✓ Interface: avanço, toque duplo, recarga e desfazer persistido
+✓ Interface: salto válido, erro no campo e cancelamento sem alteração
+✓ Interface: concluir, reiniciar e desfazer restauram os estados
+✓ Interface: armazenamento bloqueado comunica a falha e permite sessão
+✓ Interface: dados inválidos são sinalizados e salto recupera a posição
+
+12 verificações passaram. Nenhum navegador foi operado.
+HTML: IDs únicos, referências ARIA e labels resolvidos, recursos locais e seletores JS presentes.
+CSS: delimitadores equilibrados, regras para telefone e movimento reduzido presentes.
+texto/papel: 10.44:1
+secundário/papel: 5.18:1
+secundário/sálvia: 4.78:1
+botão: 9.36:1
+erro: 6.40:1
+número padrão: 4.65:1
+foco/papel: 5.16:1
+As verificações de código não comprovam qualidade visual ou conformidade integral de acessibilidade.

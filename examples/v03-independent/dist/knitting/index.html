@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ec">
+  <meta name="description" content="Malha — acompanhe uma carreira de cada vez. Protótipo com um padrão fictício de tricô.">
+  <title>Malha — Cachecol do Miguel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="core.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#trabalho">Saltar para a carreira atual</a>
+  <header class="app-header">
+    <a class="wordmark" href="./index.html" aria-label="Malha, início"><svg viewBox="0 0 34 30" aria-hidden="true"><path d="M6 4c0 8 11 10 11 19M28 4c0 8-11 10-11 19M6 13c0 8 11 10 11 14M28 13c0 8-11 10-11 14"/></svg>malha<span class="wordmark-dot">.</span></a>
+    <p class="storage-status" id="save-status"><span class="status-dot" aria-hidden="true"></span><span id="save-text">Progresso neste navegador</span></p>
+  </header>
+  <main>
+    <div class="storage-warning" id="storage-warning" role="alert" hidden></div>
+    <div class="project-heading">
+      <div><p class="eyebrow">O seu trabalho</p><h1>Cachecol do Miguel</h1></div>
+      <div class="project-spec"><span>48 carreiras</span><span class="spec-divider" aria-hidden="true">/</span><span>Repetição de 4</span></div>
+    </div>
+    <div class="workspace">
+      <section class="work-panel" id="trabalho" aria-labelledby="current-label" tabindex="-1">
+        <div class="work-topline"><h2 class="eyebrow current-label" id="current-label"><span class="current-dot" aria-hidden="true"></span>Carreira em curso</h2><span class="cycle-label" id="cycle-label">Repetição 1 de 12</span></div>
+        <div class="current-work">
+          <div class="row-number"><span id="row-number">01</span><span class="row-total" id="row-total">de 48</span></div>
+          <div class="instruction-wrap"><span class="step-label" id="step-label">Passo 1 de 4</span><p class="instruction" id="instruction">Todos os pontos<br>em meia.</p><p class="current-context" id="current-context">Esta é a carreira que está a trabalhar.</p></div>
+        </div>
+        <div class="main-actions">
+          <button class="primary-button" id="advance-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg><span id="advance-label">Concluir carreira 1</span></button>
+          <p class="tap-help" id="tap-help">Toques seguidos contam só uma vez.</p>
+          <div class="recovery-actions"><button class="text-button undo-button" id="undo-button" type="button" disabled><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4 2 8l4 4M2 8h9a5 5 0 0 1 0 10"/></svg><span id="undo-label">Desfazer</span></button><span class="action-separator" aria-hidden="true"></span><button class="text-button" id="jump-button" type="button">Ir para uma carreira<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></button></div>
+          <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true">Comece pela carreira 1. Ainda não há carreiras concluídas.</div>
+        </div>
+        <div class="progress-section">
+          <div class="progress-heading"><h3>O caminho até aqui</h3><p><strong id="completed-count">0</strong><span id="completed-label"> concluídas</span><span class="progress-total"> / 48</span></p></div>
+          <div class="progress-ruler" id="progress-ruler" role="img" aria-label="0 de 48 carreiras concluídas. Carreira 1 em curso."></div>
+          <div class="ruler-caption"><span>Cada bloco, 4 carreiras</span><span id="remaining-count">Faltam 48</span></div>
+        </div>
+        <div class="project-actions"><button type="button" class="quiet-button" id="finish-button">Concluir projeto…</button><button type="button" class="quiet-button" id="restart-button" disabled>Reiniciar…</button></div>
+      </section>
+      <aside class="pattern-panel" aria-labelledby="pattern-title">
+        <div class="pattern-heading"><div><p class="eyebrow">Para ter à mão</p><h2 id="pattern-title">A sequência</h2></div><span class="repeat-symbol" aria-hidden="true">↻</span></div>
+        <p class="pattern-intro">Quatro carreiras, sempre pela mesma ordem.</p>
+        <ol class="pattern-list" id="pattern-list">
+          <li class="pattern-row is-current" data-step="1" aria-current="step"><span class="pattern-number">1</span><div class="pattern-copy"><span class="pattern-name">Todos os pontos em meia</span><span class="pattern-state">Agora · carreira 1</span></div><span class="stitch-symbol" aria-hidden="true">∨ ∨ ∨</span></li>
+          <li class="pattern-row" data-step="2"><span class="pattern-number">2</span><div class="pattern-copy"><span class="pattern-name">Todos os pontos em tricô</span><span class="pattern-state" hidden></span></div><span class="stitch-symbol purl" aria-hidden="true">− − −</span></li>
+          <li class="pattern-row" data-step="3"><span class="pattern-number">3</span><div class="pattern-copy"><span class="pattern-name">Alternar 2 meia e 2 tricô</span><span class="pattern-state" hidden></span></div><span class="stitch-symbol mixed" aria-hidden="true">∨∨ −−</span></li>
+          <li class="pattern-row" data-step="4"><span class="pattern-number">4</span><div class="pattern-copy"><span class="pattern-name">Todos os pontos em tricô</span><span class="pattern-state" hidden></span></div><span class="stitch-symbol purl" aria-hidden="true">− − −</span></li>
+        </ol>
+        <div class="repeat-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h10a5 5 0 0 1 0 10H6m4-4-4 4 4 4M10 3 6 7l4 4"/></svg><p>Depois da 4.ª, volte à 1.ª.<br><span>Repita 12 vezes para chegar às 48.</span></p></div>
+        <details class="sample-note"><summary>Sobre este padrão</summary><p>Esta sequência é uma amostra fictícia para demonstrar Malha. Não é uma receita completa de tricô: não inclui número de pontos, fio ou tamanho de agulha.</p></details>
+        <p class="sample-label">Padrão fictício · demonstração</p>
+      </aside>
+    </div>
+    <footer class="app-footer"><span>Uma carreira de cada vez.</span><span>Progresso guardado só neste navegador.</span></footer>
+    <noscript><p class="storage-warning">Ative o JavaScript para contar carreiras e guardar o progresso. A sequência acima continua disponível para consulta.</p></noscript>
+  </main>
+  <dialog id="progress-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <form id="dialog-form" novalidate>
+      <div class="dialog-top"><p class="eyebrow" id="dialog-kicker">Ajustar progresso</p><button class="close-button" id="dialog-close" type="button" aria-label="Fechar janela"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></button></div>
+      <h2 id="dialog-title">Ir para uma carreira</h2>
+      <p class="dialog-description" id="dialog-description"></p>
+      <div id="jump-field" hidden><label for="row-input">Carreira que vai trabalhar</label><div class="input-wrap"><input id="row-input" name="row" type="number" inputmode="numeric" min="1" max="48" step="1" required aria-describedby="row-hint row-error"><span>de 48</span></div><p class="field-hint" id="row-hint">Escolha um número entre 1 e 48.</p><p class="field-error" id="row-error" role="alert" hidden></p></div>
+      <div class="change-preview" id="change-preview"></div>
+      <p class="reversible-note">Pode desfazer esta alteração depois.</p>
+      <div class="dialog-actions"><button class="secondary-button" id="dialog-cancel" type="button">Cancelar</button><button class="primary-button" id="dialog-confirm" type="submit">Confirmar</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
