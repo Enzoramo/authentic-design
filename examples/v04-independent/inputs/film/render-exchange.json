@@ -1,0 +1,20 @@
+{
+  "case": "film",
+  "creator": "/root/v04_film",
+  "phase": "study-render-before-selection",
+  "delivered_at": "2026-11-13T12:38:31.022990+00:00",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "full_page": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "full_page": true
+    }
+  ],
+  "response": "Capturas neutras disponíveis: /tmp/authentic-design-v04-independent-20261113/film/study-desktop.jpg (viewport medido 1440×1000, página inteira) e /tmp/authentic-design-v04-independent-20261113/film/study-mobile.jpg (390×844, página inteira). Inspecione suas imagens conforme o pedido e prossiga autonomamente com a seleção e implementação. Nenhuma alteração foi feita no estudo.",
+  "feedback": "No aesthetic feedback or selection by evaluator."
+}

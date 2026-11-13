@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eee9dd"><title>Revela — bancada de filmes</title><link rel="stylesheet" href="styles.css"><script src="model.js" defer></script><script src="app.js" defer></script></head>
+<body>
+<a class="skip-link" href="#main">Saltar para os pedidos</a>
+<div class="app-shell">
+<header class="masthead"><div class="brand">REVELA</div><div class="masthead-meta"><span>Laboratório fotográfico</span><span class="demo-label">Demonstração local</span></div></header>
+<main id="main" tabindex="-1">
+<div class="workspace-heading"><div><p class="eyebrow">Acompanhamento de filmes</p><h1>Bancada</h1></div><p id="summary" class="summary"></p></div>
+<div id="storage-warning" class="error-banner" role="alert" hidden></div>
+<div class="workspace">
+<section class="queue" aria-labelledby="queue-title">
+<div class="queue-title"><h2 id="queue-title">Pedidos</h2><span id="result-count" class="mono" aria-live="polite"></span></div>
+<div class="filters"><div class="field"><label for="search">Pesquisar pedido</label><div class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"></circle><path d="m15 15 5 5"></path></svg><input id="search" type="search" autocomplete="off" placeholder="Código ou nome"></div></div><div class="field"><label for="stage-filter">Etapa</label><select id="stage-filter"><option value="all">Todas as etapas</option><option value="recebido">Recebido</option><option value="revelacao">Em revelação</option><option value="digitalizando">Digitalizando</option><option value="pronto">Pronto</option></select></div></div>
+<div class="list-labels" aria-hidden="true"><span>Pedido</span><span>Cliente / filme</span><span>Etapa atual</span></div>
+<div id="orders" class="orders"></div>
+<div id="empty-state" class="empty-state" hidden><h3>Nenhum pedido encontrado</h3><p>Experimente outro código, nome ou etapa.</p><button id="clear-filters" class="button secondary" type="button">Limpar pesquisa e filtro</button></div>
+<p class="queue-help">Abra um pedido para consultar notas ou registar a próxima etapa.</p>
+</section>
+<section class="detail-region" aria-label="Pedido aberto">
+<button id="back-to-list" class="back-button" type="button"><span aria-hidden="true">←</span> Voltar aos pedidos</button>
+<article class="film-slip" id="film-slip">
+<div class="slip-topline"><span>Ficha do pedido</span><span id="detail-position"></span></div>
+<div class="slip-identity"><div><h2 id="detail-code" tabindex="-1"></h2><p id="detail-name" class="customer-name"></p></div><dl class="film-format"><div><dt>Formato</dt><dd id="detail-format"></dd></div><div><dt>Poses</dt><dd id="detail-frames"></dd></div></dl></div>
+<div class="current-state"><span>Etapa atual</span><strong id="detail-stage"></strong></div>
+<ol id="progress" class="progress" aria-label="Percurso do filme"></ol>
+<div class="note-section"><div class="note-heading"><h3>Nota do pedido</h3><button id="edit-note" class="text-button" type="button">Editar nota</button></div><p id="note-content" class="note-content"></p>
+<form id="note-form" hidden><label class="sr-only" for="note-input">Nota do pedido</label><textarea id="note-input" rows="4" maxlength="2000"></textarea><div class="note-limit"><span>Até 2000 caracteres</span><span id="note-count"></span></div><div id="note-error" class="inline-error" role="alert" hidden></div><div class="note-actions"><button class="button primary" type="submit">Guardar nota</button><button id="cancel-note" class="button secondary" type="button">Cancelar</button></div></form></div>
+<div class="advance-area"><p id="next-stage"></p><button id="advance" class="button primary advance-button" type="button"><span>Avançar etapa</span><span aria-hidden="true">→</span></button><div id="completed" class="completed" hidden><span aria-hidden="true">✓</span><div><strong>Filme pronto</strong><p>O percurso deste pedido está concluído.</p></div></div></div>
+</article>
+</section>
+</div>
+<div class="change-strip" id="change-strip" hidden><div><span class="change-label">Última alteração</span><p id="change-description"></p></div><button id="undo" class="button secondary" type="button">Desfazer</button></div>
+<p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+</main>
+<footer class="footer"><p>Dados fictícios. As alterações ficam guardadas neste navegador.</p><span class="mono">35 mm / 120</span></footer>
+</div>
+<dialog id="review-dialog" aria-labelledby="review-title"><form id="review-form"><div class="dialog-topline"><span class="eyebrow">Revisão do pedido</span><button id="close-review" class="close-button" type="button" aria-label="Fechar revisão">×</button></div><h2 id="review-title">Rever avanço</h2><div class="review-identity"><strong id="review-code"></strong><div><span id="review-name"></span><small id="review-format"></small></div></div><div class="stage-change"><div><span>Etapa atual</span><strong id="review-from"></strong></div><span class="stage-arrow" aria-hidden="true">→</span><div><span>Nova etapa</span><strong id="review-to"></strong></div></div><p class="review-hint">Confirme que o filme pode seguir para esta etapa. Pode desfazer esta alteração depois de guardar.</p><div id="review-error" class="inline-error" role="alert" hidden></div><div class="dialog-actions"><button class="button primary" id="confirm-advance" type="submit">Confirmar avanço</button><button id="cancel-review" class="button secondary" type="button">Voltar ao pedido</button></div></form></dialog>
+<dialog id="discard-dialog" aria-labelledby="discard-title"><h2 id="discard-title">A nota tem alterações</h2><p>Guarde a nota ou descarte a edição antes de sair deste pedido.</p><div class="dialog-actions"><button id="keep-editing" class="button primary" type="button">Continuar a editar</button><button id="discard-edit" class="button secondary" type="button">Descartar edição</button></div></dialog>
+<noscript><div class="noscript">Ative o JavaScript para abrir pedidos e guardar alterações.</div></noscript>
+</body></html>

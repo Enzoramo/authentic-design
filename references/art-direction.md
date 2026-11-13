@@ -37,17 +37,27 @@ The candidates need recognizable differences in the relationships that carry the
 
 Do not make every candidate the same generic utility shell with a different decorative layer. A restrained, conventional direction is a valid candidate when the task supports it; choose it for that reason, not simply because it is easiest to code. Do not equate unusual typography or dense ornament with better design.
 
-## Select and commit
+## Select from rendered evidence, not a preferred default
 
-Compare task clarity, fit to the actual material, visible distinction, consistency across states, accessibility and feasible assets. Select the strongest whole rather than averaging all candidates into an anonymous compromise. Record the chosen principle and why a plausible alternative lost. Do not ask the user to choose unless their request or a material unresolved preference calls for it.
+Render the specimens before choosing when the environment permits. Inspect the same real text, numerals, main control and state in each. A renderer can supply neutral screenshots without becoming an art director. Without rendering, mark selection provisional and disclose that limitation; a source-based preference is not visual validation.
 
-Write a compact identity rule before building the full interface:
+Do not build a straw-man contest. Give each candidate a plausible use of the same content and comparable care. Do not make one intentionally awkward, overloaded or illegible to justify the familiar option. Repair that weakness or replace the candidate. Rejecting a type composition because it “feels industrial” or a palette because it “feels less warm” is taste, not evidence of poor task fit.
 
-> This product expresses [specific relationship] through [connected visual decisions]; supporting UI follows [rules]; [tradeoff] remains.
+Review these decisions separately before judging the whole:
 
-Name concrete decisions, not adjectives. Keep this in the design record, not the end-user interface.
+- **Typography:** compare the actual letterforms, numeral behavior, widths, case, weight and hierarchy on this content. Test materially different typographic systems, not the same display serif in several arrangements. Choose roles from reading and recognition needs. Inspect available licensed fonts or use dependable fallbacks deliberately; do not equate a default system-font pair with the product's identity. Do not simulate unavailable fonts or make undeclared network requests.
+- **Palette:** establish the relationship between working surface, information, boundaries and signals. Examine value, saturation, coverage and contrast, not merely accent hue. A subject's category does not determine its UI colors. If the rationale is just a category-color association, find a more specific visual premise or use a deliberate neutral foundation. Do not import a familiar background/ink/accent/supporting-surface bundle without examining all its roles.
+- **Brand construction:** begin the specimens with the supplied name as text. Develop the product's identity in the working content before designing its mark. Then consider how the name belongs in that system: case, proportions, alignment, lettering, or a useful identifier. A decorative icon, punctuation suffix, tiny descriptor and a separator are separate decisions, not a ready-made logo recipe. Omit additions with no product-specific role. A typographic name can be a complete mark; an icon is not a required deliverable.
 
-Establish only necessary type roles, color pairings, spacing/density, containers, image/graphic behavior and states. System fonts can support an identity through composition and role; they are not an excuse to repeat one heavyweight heading treatment. Use available, licensed assets and fallbacks. Do not impose a fixed font pair, palette, corner radius or style name across projects.
+For the most tempting candidate, write a short **countercase**: its strongest plausible criticism and the strongest reason to choose another candidate. Use visible evidence. If several directions meet the functional constraints, functionality alone does not select the familiar visual family. Choose the most specific coherent expression, then state the real cost. Do not eliminate a viable expressive direction through an invented usability problem.
+
+Check for a **borrowed bundle**: could this exact font-role pairing, surface palette and brand construction move together to an unrelated product without redesign? If so, change the organizing visual relationship and rework the affected decisions together. Adding a new illustration or swapping the accent is insufficient. This is not a ban on any font, color or mark; a fixed user identity overrides exploration, and individual familiar choices can be justified.
+
+Record a compact identity decision:
+
+> Source relationship → type system → surface/color logic → name/mark construction → strongest rejected alternative and observed tradeoff.
+
+Keep it in the design record, not product copy. Select a coherent direction; do not average the candidates into a common default. Do not ask the user to choose unless a material unresolved preference requires it.
 
 ## Preserve the identity during implementation
 
@@ -55,7 +65,7 @@ Build the defining content relationship first, then supporting components. Compa
 
 A logo, tiny illustration or accent panel cannot carry all the identity while the rest of the screen stays interchangeable. Inspect a second meaningful state and a phone layout. The direction should still be recognizable during ordinary work, long text, errors, empty content and reduced motion. Keep primary controls conventional and readable; move expression into composition or content treatment when interaction novelty causes friction.
 
-Check small recurring signatures too: wordmark construction, punctuation, icon placement, arrows, section labels, rounded containers and spacing patterns. Retain those that communicate something here; remove unsupported defaults. This is an audit of their combined use, not a blacklist of symbols or styles.
+Recheck typography, palette and mark against the selected study after implementation. Also inspect microcopy, punctuation, decorative arrows, small uppercase labels and framing as a combined signature. Remove unsupported additions instead of replacing them with another universal embellishment. A domain-specific task widget does not excuse a generic identity around it.
 
 ## Compare honestly
 

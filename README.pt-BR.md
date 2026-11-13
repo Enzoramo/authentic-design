@@ -18,6 +18,14 @@ Uma skill aberta para criar experiências web e apps a partir do público, do co
 
 Não há paleta fixa, fonte obrigatória ou sorteio de estilos. A diferença precisa fazer sentido para o produto. Criar outra tela do mesmo app, por exemplo, normalmente exige continuidade visual.
 
+## Teste independente da v0.4
+
+[Resultados, código e capturas](evals/results/independent-v04.md): Pódio, Véspera e Revela. Briefs apenas funcionais; escolha autônoma após capturas neutras. Paletas e composições diferem claramente nesta amostra. A antiga combinação creme/verde/Georgia e marca com ponto/ícone não se repetiu; Pódio e Revela ainda compartilham Impact e marcas em caixa alta. Diversidade de tipografia e marca continua parcial. Fluxos principais, recuperação e persistência verificados em desktop e telefone.
+
+## Mudança na v0.4
+
+A seleção agora usa propostas renderizadas quando há ferramentas disponíveis, compara tipografia, paleta completa e construção de marca separadamente, e exige um contraponto à opção preferida. Alternativas precisam receber cuidado equivalente; associações de categoria não bastam para justificar a escolha. A marca é desenvolvida a partir do sistema do produto, sem uma receita automática de ícone e pontuação. Marcas existentes e pequenos ajustes continuam preservados.
+
 ## Rodada independente da v0.3
 
 [Três projetos inéditos, fontes e capturas](evals/results/independent-v03.md): Malha, Quintal e Zênite. Cada agente recebeu apenas requisitos funcionais e a skill congelada. Os fluxos verificados funcionaram e os estudos visuais foram produzidos, mas a diversidade de identidade ainda foi **parcial**: Malha e Quintal repetiram uma família creme/verde/Georgia, e detalhes de marca se repetiram nos três. As saídas originais foram preservadas, sem correção do avaliador.
@@ -63,7 +71,7 @@ Forneça conteúdo real, público, tarefa principal, restrições e referências
 
 ## Qualidade e limites
 
-A versão 0.3.0 acrescenta estudos visuais comparáveis, escolha explícita da identidade e comparação entre estudo e implementação. Marcas existentes e pequenos ajustes preservam seu sistema. A mudança responde à repetição visual observada na v0.2, sem impor paletas, pares de fontes ou estilos prontos.
+A versão 0.3.0 acrescentou estudos visuais comparáveis, escolha explícita da identidade e comparação entre estudo e implementação. Marcas existentes e pequenos ajustes preservam seu sistema. A mudança responde à repetição visual observada na v0.2, sem impor paletas, pares de fontes ou estilos prontos.
 
 A versão 0.2.0 incorporou uma rodada com três interfaces renderizadas: cerâmica, cinema e transporte. O [relatório](evals/results/rendered-interfaces.md) mostra antes/depois, verificações e limites. Os [protótipos completos](examples/interface-lab/README.md) podem ser executados localmente. O [registro de avaliação](evals/README.md) distingue testes executados de cenários apenas propostos. Nenhuma skill garante que toda criação será inédita ou que será a melhor em qualquer situação.
 

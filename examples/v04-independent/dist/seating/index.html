@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee7f1">
+  <title>Véspera — encontro de famílias</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="model.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Ir para a organização</a>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Véspera, início">Véspera</a>
+      <span class="demo-label">Um encontro de famílias</span>
+      <button class="button button-outline review-trigger" id="open-review"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span>Rever distribuição</span></button>
+    </header>
+
+    <section class="overview" aria-labelledby="page-title">
+      <div><p class="eyebrow">ENCONTRO DE FAMÍLIAS</p><h1 id="page-title">Organizar lugares</h1><p class="intro">Escolha um nome. Há uma mesa à sua espera.</p></div>
+      <div class="totals" aria-label="Estado da organização">
+        <div><strong id="seated-total">0 <span>/ 10</span></strong><span>à mesa</span></div>
+        <div class="unseated-total"><strong id="unseated-total">10</strong><span>sem lugar</span></div>
+        <div><strong id="free-total">11</strong><span>lugares livres</span></div>
+      </div>
+    </section>
+    <p id="storage-warning" class="storage-warning" role="alert" hidden></p>
+
+    <nav class="mobile-switch" aria-label="Painel de organização">
+      <button class="active" id="show-guests" aria-pressed="true" aria-controls="guest-panel">Convidados <span>10</span></button>
+      <button id="show-tables" aria-pressed="false" aria-controls="table-panel">Mesas <span>3</span></button>
+    </nav>
+
+    <main class="workspace" id="workspace" tabindex="-1" data-mobile-panel="guests">
+      <section class="table-panel" id="table-panel" aria-labelledby="tables-heading">
+        <header class="section-heading"><h2 id="tables-heading">À volta da mesa</h2><span>3 mesas · 11 lugares</span></header>
+        <div id="tables"></div>
+        <div class="map-caption"><span class="legend-seat" aria-hidden="true"></span><span>Toque num nome para mudar ou retirar a pessoa.</span></div>
+      </section>
+      <section class="guest-panel" id="guest-panel" aria-labelledby="guests-heading">
+        <header class="section-heading"><h2 id="guests-heading">Convidados</h2><span class="count-label">10 pessoas</span></header>
+        <label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Pesquisar convidado</span><input id="guest-search" type="search" placeholder="Pesquisar convidado" autocomplete="off"></label>
+        <div class="filters" aria-label="Filtrar convidados">
+          <button id="filter-all" class="active" aria-pressed="true">Todos <span>10</span></button>
+          <button id="filter-unseated" aria-pressed="false">Sem lugar <span id="filter-count">10</span></button>
+        </div>
+        <p id="result-count" class="sr-only" role="status"></p>
+        <ul class="guest-list" id="guest-list"></ul>
+        <div id="empty-guests" class="empty-guests" hidden><span class="empty-mark" aria-hidden="true">✓</span><h3 id="empty-heading"></h3><p id="empty-copy"></p><button id="clear-filters" class="button button-outline">Mostrar todos</button></div>
+      </section>
+    </main>
+    <footer class="app-footer"><p id="save-status"><span class="save-dot" aria-hidden="true"></span>Guardado neste navegador</p><span>Dados fictícios · o seu mapa fica neste dispositivo</span></footer>
+  </div>
+
+  <dialog id="editor" class="editor-dialog" aria-labelledby="editor-name" aria-describedby="editor-context">
+    <div class="dialog-body">
+      <button class="icon-button close-dialog" id="close-editor" aria-label="Fechar edição"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <p class="eyebrow">ESCOLHER UM LUGAR</p>
+      <h2 id="editor-name"></h2>
+      <p id="editor-context" class="editor-context"></p>
+      <form id="assignment-form">
+        <fieldset><legend>Em que mesa vai ficar?</legend><div class="table-options" id="table-options"></div></fieldset>
+        <p id="assignment-error" class="assignment-error" role="alert" hidden></p>
+        <button type="submit" class="button button-primary" id="assign-button">Atribuir mesa</button>
+        <button type="button" class="button button-remove" id="remove-guest" hidden>Retirar da mesa</button>
+        <button type="button" class="cancel-button" id="cancel-editor">Cancelar</button>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog id="review" class="review-dialog" aria-labelledby="review-title">
+    <div class="dialog-body">
+      <button class="icon-button close-dialog" id="close-review" aria-label="Fechar revisão"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <p class="eyebrow">ENCONTRO DE FAMÍLIAS</p><h2 id="review-title">Todos os lugares</h2><p id="review-summary" class="review-summary"></p>
+      <div class="review-tables" id="review-tables"></div>
+      <section class="review-unseated" aria-labelledby="review-unseated-title"><h3 id="review-unseated-title">Ainda sem lugar</h3><p id="review-unseated-names"></p></section>
+      <button class="button button-primary" id="back-to-map">Voltar à organização</button>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" hidden><p id="announcement" role="status"></p><button class="icon-button" id="dismiss-toast" aria-label="Fechar confirmação"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+  <noscript><p class="no-script">Ative o JavaScript para organizar os lugares. Véspera guarda as escolhas apenas neste navegador.</p></noscript>
+</body>
+</html>

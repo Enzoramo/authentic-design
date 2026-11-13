@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141c20">
+  <title>Pódio — marcador de ténis de mesa</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="score-model.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="masthead">
+      <div class="identity"><span class="brand">Pódio</span><span class="sport">Ténis de mesa</span></div>
+      <button type="button" class="new-match" id="new-match">Nova partida</button>
+    </header>
+
+    <main>
+      <div class="storage-warning" id="storage-warning" role="status" hidden></div>
+      <section class="match" aria-labelledby="match-title">
+        <div class="match-heading">
+          <div><div class="eyebrow" id="phase">Pronto para jogar</div><h1 id="match-title">Set 1</h1></div>
+          <div class="match-summary"><strong id="match-status">Partida empatada</strong><span id="set-status">Set empatado · 0–0</span></div>
+        </div>
+
+        <div class="scoreboard">
+          <section class="player" aria-labelledby="clara-name">
+            <div class="player-readout">
+              <div class="player-info"><h2 id="clara-name">Clara</h2><div class="set-marks" id="clara-marks" aria-hidden="true"><i></i><i></i></div><span class="sets-won" id="clara-sets">0 sets ganhos</span></div>
+              <div class="score-plate"><span class="score" id="clara-score" aria-label="Clara: 0 pontos">0</span></div>
+            </div>
+            <button type="button" class="point-button" id="point-clara" aria-label="Adicionar um ponto a Clara"><span>Ponto Clara</span><span class="plus" aria-hidden="true">+1</span></button>
+          </section>
+          <section class="player" aria-labelledby="ivo-name">
+            <div class="player-readout">
+              <div class="player-info"><h2 id="ivo-name">Ivo</h2><div class="set-marks" id="ivo-marks" aria-hidden="true"><i></i><i></i></div><span class="sets-won" id="ivo-sets">0 sets ganhos</span></div>
+              <div class="score-plate"><span class="score" id="ivo-score" aria-label="Ivo: 0 pontos">0</span></div>
+            </div>
+            <button type="button" class="point-button" id="point-ivo" aria-label="Adicionar um ponto a Ivo"><span>Ponto Ivo</span><span class="plus" aria-hidden="true">+1</span></button>
+          </section>
+        </div>
+
+        <div class="recovery-row">
+          <button type="button" class="undo-button" id="undo" disabled><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5 3 10l5 5M4 10h11a5 5 0 0 1 0 10h-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Desfazer ponto</span></button>
+          <p id="last-action">O primeiro ponto dá início ao set.</p>
+        </div>
+        <p class="rules" id="play-guidance">Set a 11 pontos, com 2 de vantagem.</p>
+      </section>
+
+      <section class="history" aria-labelledby="history-title">
+        <div class="history-heading"><h2 id="history-title">Sets da partida</h2><span>Vence quem ganhar 2 sets</span></div>
+        <p class="empty-history" id="empty-history">Ainda não há sets concluídos.</p>
+        <table id="set-table" hidden>
+          <caption class="sr-only">Resultados dos sets concluídos</caption>
+          <thead><tr><th scope="col">Set</th><th scope="col">Clara</th><th scope="col">Ivo</th><th scope="col">Vencedor</th></tr></thead>
+          <tbody id="set-rows"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer><p>Clara × Ivo · Partida fictícia, sem resultado oficial.</p><span id="save-status">Guardado neste dispositivo</span></footer>
+  </div>
+
+  <dialog id="reset-dialog" aria-labelledby="reset-title" aria-describedby="reset-description">
+    <form method="dialog">
+      <div class="eyebrow">Nova partida</div><h2 id="reset-title">Voltar ao zero?</h2>
+      <p id="reset-description">O placar e os sets desta partida serão apagados. Clara e Ivo começam de novo em 0–0.</p>
+      <div class="dialog-actions"><button class="cancel-reset" value="cancel" autofocus>Continuar esta partida</button><button class="confirm-reset" value="confirm">Começar nova partida</button></div>
+    </form>
+  </dialog>
+  <div class="sr-only" id="announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript><div class="noscript">Ative o JavaScript para registar e guardar os pontos.</div></noscript>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "version": "0.4.0",
+  "frozen_at": "2026-11-13T12:33:51.000352+00:00",
+  "launched_after": "2026-11-13T12:35:12.712716+00:00",
+  "instruction_sha256": "dc2c2eaec280602b339be9644ff34ac7170ae4c767c226f091616abb091b9c69",
+  "cases": [
+    "score",
+    "seating",
+    "film"
+  ],
+  "contexts": "Three fresh subagents; functional brief + frozen instructions only. No style hints, prior artifacts or reviewer conclusions.",
+  "rendering": "Neutral evaluator captures each direction-study at 1440x1000 before creator selection. Creator views its own captures. No aesthetic feedback. Record exchanges.",
+  "review": "Preserve submitted outputs; compare typography, full color-role bundle, brand construction and task structure separately. Test primary/recovery paths and persistence at 1440x900,390x844,320x740. No post-submission edits.",
+  "limits": "New briefs and rendering support differ from v0.3; not a causal comparison. Exact model identifier unavailable; no participant study or originality proof."
+}

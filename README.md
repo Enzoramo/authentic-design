@@ -18,6 +18,14 @@ An open Agent Skill for designing web and app experiences from the product's use
 
 There is no universal palette, required font, mandatory card layout, or random style picker. A restrained utility and an expressive cultural product should not inherit the same composition merely because the agent made both.
 
+## Independent v0.4 results
+
+[Report, source and screenshots](evals/results/independent-v04.md): Pódio, Véspera and Revela. Functional briefs only; autonomous selection after neutral captures. Palette and composition differ clearly in this sample. The old cream/green/Georgia and dot/icon mark bundle did not recur; Pódio and Revela still share Impact and uppercase marks. Typography and brand-construction diversity remains partial. Main paths, recovery and persistence were checked on desktop and phone.
+
+## What changed in v0.4
+
+Selection now uses rendered candidates when tools are available, compares typography, the full color-role bundle and brand construction separately, and asks for a countercase to the preferred option. Alternatives receive comparable care; category associations alone do not justify selection. Branding grows from the working product instead of an automatic icon-and-punctuation recipe. Existing identities and small fixes remain scoped exceptions.
+
 ## Independent v0.3 round
 
 [Three new projects, source and screenshots](evals/results/independent-v03.md): Malha, Quintal and Zênite. Each creator received functional requirements and the frozen skill only. Tested flows worked and visible direction studies were produced, but identity diversity remains **partial**: Malha and Quintal repeated a cream/green/Georgia family, and brand details recurred in all three. Original outputs are preserved without evaluator corrections.
@@ -80,7 +88,7 @@ Supporting references are read when relevant. The skill does not require loading
 
 ## Validation and limits
 
-Version 0.3.0 adds comparable visual specimens, explicit identity selection and a study-to-implementation check. Existing brands and small fixes skip fresh-identity exploration. These changes address a repeated visual family observed in independent v0.2 outputs; they impose no palette, font pair or style preset.
+Version 0.3.0 added comparable visual specimens, explicit identity selection and a study-to-implementation check. Existing brands and small fixes skip fresh-identity exploration. These changes address a repeated visual family observed in independent v0.2 outputs; they impose no palette, font pair or style preset.
 
 Version 0.2.0 incorporated findings from [three rendered interface trials](evals/results/rendered-interfaces.md): product comparison, cinema booking, and transport operations. The report includes before/after screenshots, executable sources, interaction checks, and limitations. See the [evaluation record](evals/README.md) for all runs. Structural validation is not design validation. Written concepts do not establish the quality of a rendered interface, and self-review does not replace participant research.
 

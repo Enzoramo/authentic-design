@@ -4,7 +4,7 @@ description: Design and improve web and app interfaces with product-specific UX,
 license: MIT
 metadata:
   author: Enzoramo
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # Authentic Design
@@ -39,13 +39,15 @@ For a substantial flow, read [UX and content](references/ux-and-content.md). Est
 
 For a fresh identity or meaningful variation, read [Art direction](references/art-direction.md). Treat the task model and visual identity as separate decisions: a different flow does not establish a different visual character. Once the required task is understood, explore two or three visual directions using the same representative content and controls. Derive each from specific material in the brief, with distinct typographic composition, spatial rhythm or graphic relationships; changing the accent or moving the same card is insufficient.
 
-Before building the full fresh identity, make a compact visual study in the available design medium (for code work, a small local HTML sheet is sufficient). Include real heading, decision data, control and state content so the proposals can be compared; keep it outside the product flow. Choose based on task fit, specificity, visual coherence and feasibility, then carry that visual grammar into the working interface. A prose list of navigation alternatives is not this visual study. For an existing identity or small fix, preserve the system and skip this exploration.
+Before building the full fresh identity, make a compact visual study in the available design medium (for code work, a small local HTML sheet is sufficient). Include real heading, decision data, control and state content so the proposals can be compared; keep it outside the product flow. Render and inspect the candidates before selecting when tools allow. If rendering is provided by another agent, request neutral captures rather than aesthetic advice. Choose based on observed task clarity and product-specific visual evidence, then carry that visual grammar into the working interface. A prose list of navigation alternatives is not this visual study. For an existing identity or small fix, preserve the system and skip this exploration.
 
 Leave a compact, reviewable decision record, in the response or an existing design document:
 
 > **User task → content structure → expressive idea → decisions → tradeoff → validation.**
 
 Name the actual relationships. “Premium, clean, modern” is not a rationale. Do not produce a design manifesto when the user asked for a small deliverable.
+
+For a fresh identity, challenge the selection before committing: which typography, color relationships and brand construction are specific decisions, and which arrived as a habitual bundle? Read the selection checks in [Art direction](references/art-direction.md). A category association or a different task layout does not justify recycling the same identity.
 
 For a selected direction, define only the tokens and rules the interface needs: semantic color roles and usable pairings, type roles and fallbacks, spacing and density, containers, imagery, interaction states, responsive transformations, and motion if useful. Reuse the project's existing system where possible.
 

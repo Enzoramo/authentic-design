@@ -42,6 +42,10 @@ At the initial release, the remaining five cases in `cases.json` had **not been 
 
 [Report and original screenshots](results/independent-v03.md), 2026-11-13. Three fresh contexts implemented knitting progress, seed exchange and observation logging. Frozen v0.3, functional briefs only, no post-submission edits. All created visible direction studies (3/3/2); selected relationships carried into the prototypes and tested flows worked. Visual diversity was partial: the knitting and seed apps converged on cream/green/Georgia; all used related serif wordmarks and small-label conventions. Desktop and 390/320 px evidence is preserved. No controlled improvement claim.
 
+## Independent v0.4 round
+
+[Report](results/independent-v04.md), 2026-11-13: scorekeeping, guest seating and film processing, each in a fresh context. Three candidates each; neutral desktop/mobile captures before selection and during creator-led verification. Final sources frozen after autonomous revisions. Stronger separation of palette/composition, residual Impact/uppercase-mark overlap in two outputs. Browser paths and screenshots preserved; renderer support and briefs differ from earlier rounds, so no causal comparison is claimed.
+
 ## Contributing a regression
 
 Provide the brief, expected observable behavior, actual artifact, and the specific failure. Prefer a narrow repair and a counterexample where the new rule should not apply. Do not grow a style blacklist from a single disliked result.
