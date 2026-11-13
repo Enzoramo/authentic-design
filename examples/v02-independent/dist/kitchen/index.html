@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183547">
+  <title>Arroz de cogumelos · Panela</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Saltar para a receita</a>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand" aria-label="Panela">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 17h24v12a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6V17ZM3 20h5m24 0h5M6 13h28M17 9h6M14 4v2m12-2v2"/></svg>
+        <span>panela<span class="brand-dot">.</span></span>
+      </div>
+      <span class="demo-label">Receita de demonstração</span>
+    </header>
+
+    <main>
+      <section class="recipe-heading" aria-labelledby="recipe-title">
+        <div>
+          <h1 id="recipe-title">Arroz de cogumelos</h1>
+          <div class="recipe-meta">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg><strong>30 min</strong> no total</span>
+            <span class="meta-dot" aria-hidden="true">·</span>
+            <span>4 passos</span>
+          </div>
+        </div>
+        <svg class="recipe-drawing" viewBox="0 0 230 125" aria-hidden="true">
+          <path class="drawing-fill" d="M33 64c4 31 23 48 72 48s68-17 72-48Z"/>
+          <ellipse cx="105" cy="64" rx="73" ry="20"/>
+          <path d="M33 64c4 31 23 48 72 48s68-17 72-48M71 110v7h67v-7"/>
+          <path class="drawing-mushroom" d="M128 37c-1-14 8-26 21-27 15-1 28 12 27 27-11 6-33 6-48 0Z"/>
+          <path d="m146 41-4 16c5 5 14 5 18 0l-3-16M136 31c2-5 6-8 11-9"/>
+          <path class="drawing-mushroom" d="M62 48c-2-12 5-24 17-26 13-2 25 8 25 21-9 7-27 9-42 5Z"/>
+          <path d="m80 49 1 15c5 3 11 3 14-1l-6-15M70 41c1-4 3-7 7-9"/>
+          <g class="rice"><path d="m48 63 6 2m7 7 6-1m31 4 5-2m9-12 6 2m12 7 5-2m10 8 6-1m11-9 5-3m-75 8 5 2m-10-14 5 1m41 18 5 1m-4-27 5 1m-29-2 5-2"/></g>
+          <path class="herb" d="m187 88 18-31m-12 21c-9-2-11-8-7-12 7-1 9 4 7 12Zm5-9c9 1 15-2 14-8-6-4-11 1-14 8Zm-8 15c7 6 14 5 16 0-3-6-9-5-16 0Z"/>
+        </svg>
+      </section>
+
+      <div class="workspace-toolbar">
+        <div id="save-status" class="save-status" role="status"><span class="status-dot" aria-hidden="true"></span><span id="save-copy">O progresso fica guardado neste dispositivo.</span></div>
+        <button id="restart-button" class="text-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></svg>Recomeçar</button>
+      </div>
+      <nav class="mobile-switch" aria-label="Vistas da receita">
+        <button type="button" id="show-ingredients" aria-controls="ingredients-panel" aria-pressed="true">Ingredientes <span id="mobile-count">0/7</span></button>
+        <button type="button" id="show-method" aria-controls="method-panel" aria-pressed="false">Preparação <span id="mobile-step">4 passos</span></button>
+      </nav>
+
+      <div id="workspace" class="workspace" tabindex="-1" data-panel="ingredients">
+        <section id="ingredients-panel" class="ingredients-panel" aria-labelledby="ingredients-title">
+          <div class="ingredients-heading">
+            <h2 id="ingredients-title">Ingredientes</h2>
+            <p id="ingredient-progress">0 de 7 preparados</p>
+          </div>
+          <fieldset class="servings">
+            <legend>Para quantas pessoas?</legend>
+            <div class="servings-options">
+              <label><input type="radio" name="servings" value="2" checked><span>2</span></label>
+              <label><input type="radio" name="servings" value="4"><span>4</span></label>
+              <label><input type="radio" name="servings" value="6"><span>6</span></label>
+            </div>
+          </fieldset>
+          <div id="ingredients-list" class="ingredients-list"></div>
+          <p id="quantity-note" class="quantity-note">Assinale os ingredientes que já tem preparados.</p>
+          <button id="mobile-continue" type="button" class="mobile-continue">Ir para a preparação <span aria-hidden="true">→</span></button>
+        </section>
+
+        <section id="method-panel" class="method-panel" aria-labelledby="method-title">
+          <div class="method-heading"><h2 id="method-title">Preparação</h2><span id="method-progress">Por começar</span></div>
+          <div id="cooking-card" class="cooking-card"></div>
+          <ol id="step-list" class="step-list" aria-label="Passos da receita"></ol>
+        </section>
+      </div>
+      <p class="recipe-notice">Esta é uma receita fictícia de demonstração. Não foi testada como orientação culinária.</p>
+    </main>
+    <footer><span>panela.</span><p>Uma receita, um passo de cada vez.</p></footer>
+  </div>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="restart-dialog" aria-labelledby="restart-title" aria-describedby="restart-description">
+    <form method="dialog">
+      <span class="dialog-icon" aria-hidden="true">↺</span>
+      <h2 id="restart-title">Recomeçar a preparação?</h2>
+      <p id="restart-description"></p>
+      <div class="dialog-actions"><button value="cancel" class="secondary-button" autofocus>Cancelar</button><button value="restart" class="primary-button">Recomeçar</button></div>
+    </form>
+  </dialog>
+  <noscript>Ative o JavaScript para ajustar as quantidades e acompanhar a preparação desta receita.</noscript>
+</body>
+</html>

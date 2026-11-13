@@ -34,6 +34,10 @@ At the initial release, the remaining five cases in `cases.json` had **not been 
 
 [Full report, before/after evidence, and limitations](results/rendered-interfaces.md). Three independent agents implemented synthetic pottery retail, cinema booking, and transport-operation briefs using v0.1.0. The parent reviewed actual browser output, directed corrections, tested desktop/mobile flows, and distilled the observed failures into v0.2.0. These are three new implementation trials, not reruns of the original written cases or proof of independent v0.2 improvement.
 
+## Independent v0.2 round
+
+[Report and original screenshots](results/independent-v02.md), 2026-11-13. Three fresh contexts implemented oral-history reading, cooking assistance and French practice from functional briefs. No extra style direction or post-submission corrections were given. Browser checks covered desktop and 390/320 px. The outputs differed in task model and responsive behavior, but repeated a cool pale surface / dark blue ink / strong sans-serif visual family. v0.2 is unchanged; all submitted files and input hashes are preserved. This is not a matched v0.1 or no-skill comparison.
+
 ## Contributing a regression
 
 Provide the brief, expected observable behavior, actual artifact, and the specific failure. Prefer a narrow repair and a counterexample where the new rule should not apply. Do not grow a style blacklist from a single disliked result.

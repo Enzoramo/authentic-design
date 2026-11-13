@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d3151">
+  <meta name="description" content="Um arquivo de histórias do bairro para ler e guardar. Protótipo com seis registos fictícios.">
+  <title>Vozes do Bairro — arquivo de histórias</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Saltar para as histórias</a>
+  <header class="masthead">
+    <a class="wordmark" href="./index.html" aria-label="Vozes do Bairro, início"><svg viewBox="0 0 44 40" width="44" height="40" aria-hidden="true"><path d="M3 4h16v21H9l-6 9V4Zm22 0h16v21H31l-6 9V4Z" fill="currentColor"/><path d="M7 9h8M7 14h8M29 9h8M29 14h8" stroke="#f0f4f8" stroke-width="2"/></svg><span>Vozes<br>do Bairro</span></a>
+    <p class="masthead-description">Arquivo de<br>memórias em comunidade</p>
+    <nav class="view-switch" aria-label="Navegação principal">
+      <button type="button" id="archive-view" class="view-button active" aria-current="page">Arquivo <span class="nav-count">6</span></button>
+      <button type="button" id="collection-view" class="view-button">A minha coleção <span class="nav-count" id="collection-count">0</span></button>
+    </nav>
+  </header>
+  <div class="workspace">
+    <aside class="sidebar" aria-labelledby="intro-title">
+      <div class="intro">
+        <p class="section-label">Histórias de quem vive aqui</p>
+        <h1 id="intro-title">Um bairro,<br>muitas vozes.</h1>
+        <p>Entre no quotidiano de um lugar, pelas palavras de quem o lembra.</p>
+      </div>
+      <fieldset class="topics">
+        <legend>Explorar por tema</legend>
+        <div id="topic-controls" class="topic-controls">
+          <button type="button" class="topic-button selected" data-topic="Todos" aria-pressed="true"><span>Todos os temas</span><span class="topic-count">6</span></button>
+          <button type="button" class="topic-button" data-topic="Trabalho" aria-pressed="false"><span>Trabalho</span><span class="topic-count">2</span></button>
+          <button type="button" class="topic-button" data-topic="Lugares" aria-pressed="false"><span>Lugares</span><span class="topic-count">2</span></button>
+          <button type="button" class="topic-button" data-topic="Encontros" aria-pressed="false"><span>Encontros</span><span class="topic-count">2</span></button>
+        </div>
+      </fieldset>
+      <div class="archive-note"><span class="note-symbol" aria-hidden="true">Aa</span><p>Histórias para ler.<br>Este arquivo apresenta apenas transcrições, sem ficheiros de áudio.</p></div>
+    </aside>
+    <main id="content" tabindex="-1">
+      <form id="search-form" role="search" class="search-form">
+        <label for="search">Procurar uma história</label>
+        <div class="search-field"><svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="search" type="search" placeholder="Uma palavra, um nome, uma lembrança…" autocomplete="off" aria-describedby="search-hint"><button type="button" id="clear-search" class="clear-search" aria-label="Limpar pesquisa" hidden>×</button></div>
+        <p id="search-hint">Pesquise nos títulos, nas pessoas e nas transcrições.</p>
+      </form>
+      <div class="results-header"><div><h2 id="results-title">Todas as histórias</h2><p id="collection-hint" hidden>As suas leituras, guardadas apenas neste dispositivo.</p></div><p id="result-count" aria-live="polite" aria-atomic="true">6 histórias</p></div>
+      <p id="active-filters" class="active-filters" hidden></p>
+      <div id="stories" class="stories"></div>
+      <section id="empty-state" class="empty-state" hidden><div class="empty-mark" aria-hidden="true">…</div><h3 id="empty-title"></h3><p id="empty-description"></p><button type="button" id="empty-action" class="primary-button"></button></section>
+      <p class="storage-warning" id="storage-warning" role="status" hidden></p>
+      <footer class="content-footer"><span class="demo-label">Conteúdo de demonstração</span><p>Todos os registos, pessoas, datas e excertos são fictícios.</p></footer>
+    </main>
+  </div>
+  <dialog id="record-dialog" aria-labelledby="record-title">
+    <div class="reader-top"><p id="record-id"></p><button type="button" id="close-record" class="close-record" aria-label="Fechar registo">Fechar <span aria-hidden="true">×</span></button></div>
+    <article class="reader-content"><span class="reader-topic" id="record-topic"></span><h2 id="record-title"></h2><p class="speaker-line">Nas palavras de <strong id="record-speaker"></strong></p><dl class="record-facts"><div><dt>Data do registo</dt><dd id="record-date"></dd></div><div><dt>Disponível neste protótipo</dt><dd>Texto integral · sem áudio</dd></div></dl><div class="transcript-heading"><h3>Transcrição integral</h3><span aria-hidden="true">“</span></div><p class="transcript" id="record-transcript"></p><div class="reader-bottom"><button type="button" id="record-save" class="primary-button"></button><p>Uma história fictícia de demonstração.</p></div></article>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="noscript">Ative o JavaScript para pesquisar, ler as seis transcrições e guardar a sua coleção neste protótipo.</p></noscript>
+</body>
+</html>

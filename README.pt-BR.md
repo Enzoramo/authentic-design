@@ -64,6 +64,8 @@ Aqui, autenticidade significa escolhas específicas e coerentes. Não significa 
 
 As instruções da skill estão em inglês para facilitar a distribuição; a interface criada deve usar o idioma e a localidade pedidos pelo usuário.
 
+Uma [rodada independente da v0.2](evals/results/independent-v02.md) testou três projetos novos sem dicas adicionais de estilo nem correções do avaliador. Os fluxos principais funcionaram, mas fundos claros frios, azul escuro e títulos sem serifa fortes se repetiram. O resultado foi parcial: tarefas distintas, identidade visual ainda recorrente. A skill testada permanece sem alterações.
+
 ## Contribuição e licença
 
 Contribua com um briefing reproduzível, versão usada, resultado observado e problema concreto. Remova dados privados e inclua um caso em que a nova regra não deve valer. Consulte o [método de avaliação](evals/README.md).

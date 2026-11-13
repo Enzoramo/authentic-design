@@ -79,6 +79,8 @@ Version 0.2.0 incorporates findings from [three rendered interface trials](evals
 
 No skill can guarantee that every result will be unique or objectively the best. Output depends on the model, brief, assets, implementation tools, and feedback. “Authentic” here means specific and coherently reasoned; it does not mean undetectable AI authorship, imitation of a designer, or verified originality across the internet.
 
+A separate [independent v0.2 follow-up](evals/results/independent-v02.md) tested three new briefs without extra style direction or reviewer corrections. Main flows worked, but cool pale surfaces, dark blue ink and strong sans-serif headings recurred. The result supports task differentiation more strongly than independent visual identity. The tested skill is unchanged.
+
 ## Contribute
 
 Submit a reproducible brief, the skill version, relevant host/model information, the observed output, and the specific decision that failed. Use synthetic or shareable material; remove private client data. Include a case where the proposed change should **not** apply, so an improvement does not become another universal style rule.

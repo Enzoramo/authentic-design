@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-13",
+  "skill_version": "0.2.0",
+  "skill_sha256": "1906f0afa69b8d7dd2ef71cadf9d6fb2d72c93451dadbcef499cc2a0bc58d53f",
+  "independent_contexts": true,
+  "external_style_hints": false,
+  "prior_outputs_available": false,
+  "parent_design_corrections_before_rating": false,
+  "trials": [
+    "archive",
+    "kitchen",
+    "learning"
+  ],
+  "scope": "One independent implementation per brief; parent renders submitted output unchanged. Not a no-skill controlled comparison."
+}
