@@ -49,6 +49,8 @@ Ask whether major decisions belong to this brief, hierarchy reflects task priori
 
 Verify the selection countercase: were alternatives treated fairly and rejected for observed tradeoffs, or for unsupported category stereotypes? Compare font roles, the entire color-role bundle and brand construction separately; do not let one distinctive task widget stand in for all three.
 
+For typography and marks, inspect the actual rendered face and case, not just font-stack declarations. Check whether the name inherited a prominent object's treatment without its own rationale. Where a focused comparison was needed, did it keep the composition stable and give the alternate type equal care? Distinguish a task-specific typographic relationship from the same habitual pairing with a new explanation. A different font in every artifact is not a quality target; neither is accepting a repeated relationship because each interface has a different function.
+
 Verify that the selected direction survives a second useful state and the responsive layout. Compare against authorized prior work when available; assess same-product consistency separately. Record the visible evidence and any recurring defaults. Do not infer AI authorship from a style.
 
 Fix task blockers and accessibility failures before cosmetic refinements. Address observed hierarchy, rhythm, or identity problems; recheck affected behavior. If further improvement is speculative, describe a next experiment rather than iterating indefinitely.

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3f8">
+  <meta name="description" content="Uma narrativa curta em que cada escolha abre um caminho. Leia, volte e experimente outro percurso.">
+  <title>Vereda — uma história com escolhas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="story.js" defer></script>
+  <script src="persistence.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#reading">Ir para a leitura</a>
+  <div class="page">
+    <header class="site-header">
+      <div class="brand" aria-label="Vereda">Vereda</div>
+      <div class="text-control">
+        <label for="text-size">Tamanho do texto</label>
+        <select id="text-size">
+          <option value="100">Padrão</option>
+          <option value="115">Grande</option>
+          <option value="130">Maior</option>
+        </select>
+      </div>
+      <button class="outline-button path-button" id="open-path" aria-haspopup="dialog">Percurso <span id="path-count" aria-hidden="true">1</span></button>
+    </header>
+
+    <main id="reading" class="workspace" tabindex="-1">
+      <article class="reading-column" aria-labelledby="passage-title">
+        <div class="passage-meta"><span id="passage-position">Passagem 1</span><span id="ending-label" class="ending-label" hidden>Final</span></div>
+        <h1 id="passage-title" tabindex="-1">Início</h1>
+        <p class="prose" id="passage-text">Ao voltar à estação da vila, Nina encontrou um envelope sem remetente. Dentro havia uma chave e a frase: antes que fechem as portas.</p>
+        <section id="decisions" aria-labelledby="choices-label">
+          <h2 id="choices-label" class="small-label">Que caminho seguir?</h2>
+          <div class="choices" id="choices"></div>
+        </section>
+        <section id="ending-actions" class="ending-actions" hidden aria-label="Continuar a experiência">
+          <p>Este percurso chegou ao fim.</p>
+          <button id="open-restart" class="solid-button" aria-haspopup="dialog">Experimentar outro percurso <span aria-hidden="true">↻</span></button>
+        </section>
+        <footer class="reading-footer">
+          <button class="back-button" id="back" disabled><span aria-hidden="true">←</span> Voltar uma passagem</button>
+          <p id="save-status" class="save-status" role="status">Leitura guardada neste navegador</p>
+        </footer>
+        <p id="recovery-notice" class="notice" hidden>Não foi possível recuperar a leitura anterior. Você pode começar um novo percurso.</p>
+      </article>
+      <aside class="path-margin" aria-labelledby="margin-title">
+        <h2 id="margin-title">Seu percurso</h2>
+        <ol id="margin-path"></ol>
+        <button class="text-button" id="inspect-path" aria-haspopup="dialog">Consultar passagens <span aria-hidden="true">↗</span></button>
+      </aside>
+    </main>
+    <div class="live-region" role="status" id="announcements"></div>
+    <noscript><p class="notice">Ative o JavaScript para escolher caminhos e guardar sua leitura.</p></noscript>
+  </div>
+
+  <dialog id="path-dialog" class="path-dialog" aria-labelledby="path-title">
+    <div class="dialog-top"><h2 id="path-title">Seu percurso</h2><button class="close-button" id="close-path" aria-label="Fechar percurso" autofocus>×</button></div>
+    <p class="dialog-intro">Releia as passagens por onde você passou. Seu ponto de leitura permanece guardado.</p>
+    <ol id="history-list" class="history-list"></ol>
+    <div class="dialog-bottom"><button class="solid-button" id="resume">Retomar leitura <span aria-hidden="true">→</span></button></div>
+  </dialog>
+
+  <dialog id="restart-dialog" class="restart-dialog" aria-labelledby="restart-title" aria-describedby="restart-description">
+    <h2 id="restart-title">Começar outro percurso?</h2>
+    <p id="restart-description">Você voltará ao início. O percurso atual será apagado; o tamanho do texto será mantido.</p>
+    <div class="confirm-actions"><button id="cancel-restart" class="outline-button" autofocus>Cancelar</button><button id="confirm-restart" class="solid-button">Reiniciar história</button></div>
+  </dialog>
+</body>
+</html>

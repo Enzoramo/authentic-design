@@ -1,0 +1,67 @@
+{
+  "study": {
+    "desktop": [
+      1440,
+      1000,
+      1440,
+      2986
+    ],
+    "mobile": [
+      390,
+      844,
+      390,
+      4481
+    ],
+    "request": "A/B/C and type comparison desktop; page/comparison mobile",
+    "delivered": "Full-page study images in own case folder; no aesthetic feedback.",
+    "font_metadata": "Computed CSS stacks shared with explicit warning that they do not prove effective glyph source."
+  },
+  "preflight": {
+    "screens": [
+      "ui-desktop-initial.jpg",
+      "ui-desktop-review.jpg",
+      "ui-mobile-initial.jpg",
+      "ui-mobile-error.jpg",
+      "ui-mobile-review.jpg",
+      "ui-320-list.jpg",
+      "ui-320-error.jpg"
+    ],
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "observed": "Duplicate08:15,limit18:40,format2:70 rejected without losing edit; saved04:00/A tentativa seguinte; added02:00/Uma pergunta; correct sorted durations; first00:00readonly and deletion disabled; cancel/delete/undo/reload checked; explicit draft discard retained list. Review matched5chapters.",
+    "creator_revisions": "Field border contrast revised before preflight; after neutral keyboard observation (BODY after second Tab), creator added explicit cycle to both dialogs. Retest: Manter→Excluir→Manter,Shift+Tab→Excluir,Escape→trigger; review close/backward-to-download/Tab-to-close/Escape checked.",
+    "download_limit": "Click showed download-requested status; download-event wait timed out. Internal chrome://downloads page denied by browser policy. No bypass or further inspection of download storage. Model export-content test passed; downloaded file not read.",
+    "capture_issue": "Denied internal-page attempt left an agent-created blank tab active. Resize then affected blank tab; measurement revealed target still1440px. Blank closed and target measured320px before captures. No wrong-size screenshot retained."
+  },
+  "final_review": {
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "document_width_equals_viewport": true,
+    "console_errors": [],
+    "sources": "Closed submission; no post-close product changes."
+  }
+}

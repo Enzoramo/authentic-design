@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfafc">
+  <title>Minuto — Como nasce uma ideia</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="model.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#chapter-list">Ir para os capítulos</a>
+  <div class="workspace">
+    <header class="app-header">
+      <div class="identity"><span class="wordmark">Minuto</span><span class="app-purpose">Editor de capítulos</span></div>
+      <p class="save-status" id="storage-status">Salvo neste navegador</p>
+    </header>
+    <main>
+      <div class="episode-heading">
+        <div><p class="eyebrow">Episódio fictício</p><h1>Como nasce uma ideia</h1></div>
+        <div class="episode-duration"><strong>18:40</strong><span>duração fixa</span></div>
+      </div>
+      <div class="episode-map" aria-label="Distribuição dos capítulos ao longo de 18 minutos e 40 segundos">
+        <div class="map-segments" id="map-segments" aria-hidden="true"></div>
+        <div class="map-caption"><span>00:00</span><span>Um episódio, <span id="map-count">4</span> pontos de entrada</span><span>18:40</span></div>
+      </div>
+      <div class="workspace-toolbar">
+        <h2 id="chapters-heading">Capítulos <span id="chapter-count">4</span></h2>
+        <div class="toolbar-actions"><button class="button button-quiet" id="undo-button" type="button" disabled>Desfazer</button><button class="button button-outline" id="review-button" type="button">Revisar e exportar</button></div>
+      </div>
+      <div class="editor-workspace">
+        <section class="sequence" aria-labelledby="chapters-heading">
+          <div class="list-labels" aria-hidden="true"><span>Começa em</span><span>Capítulo</span><span>Duração</span></div>
+          <ol class="chapter-list" id="chapter-list" tabindex="-1"></ol>
+          <button class="add-button" id="add-button" type="button"><span aria-hidden="true">+</span> Adicionar capítulo</button>
+          <p class="sequence-note">Cada intervalo termina no início do próximo capítulo.</p>
+        </section>
+        <section class="edit-panel" id="edit-panel" aria-labelledby="edit-heading">
+          <button class="mobile-back" id="back-button" type="button">Voltar aos capítulos</button>
+          <div class="edit-panel-heading"><h2 id="edit-heading">Editar capítulo</h2><span class="draft-status" id="draft-status">Salvo</span></div>
+          <form id="chapter-form" novalidate>
+            <div class="field"><label for="chapter-title">Título</label><input id="chapter-title" name="title" type="text" autocomplete="off" aria-describedby="title-error"><p class="field-error" id="title-error" hidden></p></div>
+            <div class="field"><label for="chapter-time">Começa em <span class="label-hint">mm:ss</span></label><input class="time-input" id="chapter-time" name="time" type="text" inputmode="text" autocomplete="off" placeholder="05:30" aria-describedby="time-help time-error"><p class="field-help" id="time-help">Use um horário antes de 18:40.</p><p class="field-error" id="time-error" hidden></p></div>
+            <div class="interval-preview" id="interval-preview"><p>Intervalo salvo</p><div><strong id="interval-range">00:00 — 03:20</strong><span id="interval-duration">03:20 de duração</span></div></div>
+            <div class="edit-actions"><button class="button button-primary" id="save-button" type="submit">Salvar alteração</button><button class="button button-quiet" id="discard-button" type="button" hidden>Cancelar</button></div>
+          </form>
+          <div class="delete-area"><button class="delete-button" id="delete-button" type="button">Excluir capítulo</button><p class="fixed-note" id="fixed-note" hidden>O primeiro capítulo permanece em 00:00 e não pode ser excluído.</p></div>
+        </section>
+      </div>
+      <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+      <p class="storage-warning" id="storage-warning" role="alert" hidden></p>
+    </main>
+    <footer class="app-footer"><span>Horários em minutos:segundos</span><span>Exportação em texto simples · .txt</span></footer>
+  </div>
+  <dialog id="review-dialog" aria-labelledby="review-heading" class="review-dialog">
+    <div class="dialog-heading"><div><p class="eyebrow">Como nasce uma ideia</p><h2 id="review-heading">Revisar capítulos</h2></div><button class="close-button" type="button" id="close-review" aria-label="Fechar revisão">×</button></div>
+    <p class="review-intro">Confira a sequência e a duração de cada intervalo antes de exportar.</p>
+    <div class="review-summary"><span id="review-count">4 capítulos</span><span>18:40 no total</span></div>
+    <div class="review-table-wrap"><table class="review-table"><thead><tr><th scope="col">Capítulo</th><th scope="col">Início</th><th scope="col">Duração</th></tr></thead><tbody id="review-rows"></tbody></table></div>
+    <p class="export-note">O arquivo terá um capítulo por linha: <span>mm:ss Título</span>.</p>
+    <div class="dialog-actions"><button class="button button-outline" type="button" id="back-review">Voltar à edição</button><button class="button button-primary" type="button" id="export-button">Baixar .txt</button></div>
+    <p class="download-feedback" id="download-feedback" role="status"></p>
+  </dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-heading" aria-describedby="confirm-description" class="confirm-dialog">
+    <h2 id="confirm-heading">Excluir capítulo?</h2>
+    <p id="confirm-description"></p>
+    <div class="dialog-actions"><button class="button button-outline" type="button" id="confirm-cancel">Manter capítulo</button><button class="button button-danger" type="button" id="confirm-accept">Excluir capítulo</button></div>
+  </dialog>
+  <noscript><p class="noscript">Ative o JavaScript para editar e exportar os capítulos.</p></noscript>
+</body>
+</html>

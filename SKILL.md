@@ -4,7 +4,7 @@ description: Design and improve web and app interfaces with product-specific UX,
 license: MIT
 metadata:
   author: Enzoramo
-  version: "0.4.0"
+  version: "0.5.0"
 ---
 
 # Authentic Design
@@ -47,7 +47,7 @@ Leave a compact, reviewable decision record, in the response or an existing desi
 
 Name the actual relationships. “Premium, clean, modern” is not a rationale. Do not produce a design manifesto when the user asked for a small deliverable.
 
-For a fresh identity, challenge the selection before committing: which typography, color relationships and brand construction are specific decisions, and which arrived as a habitual bundle? Read the selection checks in [Art direction](references/art-direction.md). A category association or a different task layout does not justify recycling the same identity.
+For a fresh identity, challenge the selection before committing: which typography, color relationships and brand construction are specific decisions, and which arrived as a habitual bundle? Read the selection checks in [Art direction](references/art-direction.md), including the focused type/name comparison. Font availability is a feasibility constraint, not an identity rationale. A distinctive data treatment does not automatically belong in the product name; decide those roles separately. A category association or a different task layout does not justify recycling the same identity.
 
 For a selected direction, define only the tokens and rules the interface needs: semantic color roles and usable pairings, type roles and fallbacks, spacing and density, containers, imagery, interaction states, responsive transformations, and motion if useful. Reuse the project's existing system where possible.
 

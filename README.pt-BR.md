@@ -18,6 +18,14 @@ Uma skill aberta para criar experiências web e apps a partir do público, do co
 
 Não há paleta fixa, fonte obrigatória ou sorteio de estilos. A diferença precisa fazer sentido para o produto. Criar outra tela do mesmo app, por exemplo, normalmente exige continuidade visual.
 
+## Teste independente da v0.5
+
+[Relatório, código e capturas](evals/results/independent-v05.md): Revez, Vereda e Minuto, com briefs funcionais em contextos novos. Nenhum escolheu Impact ou nome todo em caixa alta; os papéis tipográficos e as composições variam. Ainda há semelhanças: todos preservaram a inicial maiúscula, e Vereda/Minuto usam paletas claras lilás/ameixa próximas. Fluxos, recuperação, persistência e desktop/telefone verificados. O gerador TXT passou no teste de código; o arquivo baixado não foi inspecionado. Não é prova de originalidade universal nem comparação causal entre versões.
+
+## Mudança na v0.5
+
+Tipografia de conteúdo e nome do produto passam a ser escolhas separadas: um número, código ou título de destaque não determina automaticamente a marca. A skill verifica as fontes disponíveis e questiona escolhas habituais dentro da mesma composição, com nome, rótulo e dados reais. Não proíbe fontes ou caixa alta, não impõe outra combinação nem sorteia estilos. Marcas existentes e pequenos ajustes continuam preservados.
+
 ## Teste independente da v0.4
 
 [Resultados, código e capturas](evals/results/independent-v04.md): Pódio, Véspera e Revela. Briefs apenas funcionais; escolha autônoma após capturas neutras. Paletas e composições diferem claramente nesta amostra. A antiga combinação creme/verde/Georgia e marca com ponto/ícone não se repetiu; Pódio e Revela ainda compartilham Impact e marcas em caixa alta. Diversidade de tipografia e marca continua parcial. Fluxos principais, recuperação e persistência verificados em desktop e telefone.

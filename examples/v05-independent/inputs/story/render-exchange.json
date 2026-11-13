@@ -1,0 +1,80 @@
+{
+  "study": {
+    "desktop": [
+      1440,
+      1000,
+      1440,
+      2763
+    ],
+    "mobile": [
+      390,
+      844,
+      390,
+      3395
+    ],
+    "request": "A/B/C and type comparison desktop/phone",
+    "delivered": "Full-page study images in own case folder; no aesthetic feedback.",
+    "font_metadata": "Computed CSS stacks shared with explicit warning that they do not prove effective glyph source."
+  },
+  "preflight": {
+    "screens": [
+      "ui-desktop-initial.jpg",
+      "ui-mobile-initial.jpg",
+      "ui-mobile-confirm.jpg",
+      "ui-mobile-route.jpg",
+      "ui-320-largest.jpg",
+      "ui-desktop-ending.jpg"
+    ],
+    "viewports": [
+      [
+        1440,
+        1000
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "observed": "All three endings reached; route consultation/back/alternate path; restart cancel retained route, confirm reset while retaining size. Reload retained ending and Maior. At320px,initial passage scrollY279 before/after reload. Enter/Escape restored route-trigger focus; restart initially focused Cancelar.",
+    "creator_revisions": "Candidate B inherited button text color repaired before selection, original and revised studies retained. No product source revision after preflight requested.",
+    "limits": "No full keyboard/screen-reader audit or participant test."
+  },
+  "study_revision_1": {
+    "creator_observation": "Inherited text color on candidate B route button; creator corrected own study before selection.",
+    "capture": "study-revision-1-desktop.jpg",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "document_width": 1440,
+    "source": "studies/story-revision-1; original study retained",
+    "feedback": "Image/dimensions only; no aesthetic advice."
+  },
+  "final_review": {
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "document_width_equals_viewport": true,
+    "console_errors": [],
+    "sources": "Closed submission; no post-close product changes."
+  }
+}

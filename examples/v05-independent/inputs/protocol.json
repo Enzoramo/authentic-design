@@ -1,0 +1,14 @@
+{
+  "version": "0.5.0",
+  "frozen_at": "2026-11-13T13:16:06.708833+00:00",
+  "instruction_sha256": "d65cb1c687ffb336b49da3a8ecba960b72521ff8bcb58435cc622e7b96b3ba44",
+  "cases": [
+    "loans",
+    "story",
+    "chapters"
+  ],
+  "contexts": "Three fresh subagents; functional brief + frozen instructions only. No style hints, prior artifacts or reviewer conclusions. Installed font inventory inspection allowed; no proprietary font redistribution.",
+  "rendering": "Neutral evaluator supplies desktop/phone captures before creator selection and creator-requested functional captures before close; no aesthetic feedback. Record exchanges and all autonomous revisions.",
+  "review": "Freeze submitted products. Inspect typography, full palette, brand construction and task composition separately. Test primary/recovery paths and persistence at measured 1440x900,390x844,320x740.",
+  "limits": "One run per new brief, same neutral-renderer pattern as v0.4 but different content. No matched version/no-skill control, participants or originality proof. Exact model/sampling not captured."
+}

@@ -46,6 +46,10 @@ At the initial release, the remaining five cases in `cases.json` had **not been 
 
 [Report](results/independent-v04.md), 2026-11-13: scorekeeping, guest seating and film processing, each in a fresh context. Three candidates each; neutral desktop/mobile captures before selection and during creator-led verification. Final sources frozen after autonomous revisions. Stronger separation of palette/composition, residual Impact/uppercase-mark overlap in two outputs. Browser paths and screenshots preserved; renderer support and briefs differ from earlier rounds, so no causal comparison is claimed.
 
+## Independent v0.5 round
+
+[Report](results/independent-v05.md), 2026-11-13: object loans, branching fiction and audio chapter editing. Fresh functional-only contexts, three candidates plus a focused type/name comparison each, neutral renderer and creator-led revisions before closure. No selected Impact/uppercase names; varied type roles and compositions, but title-case names recur and two palettes remain pale lilac/plum. Desktop/390/320px, core/recovery/reload and focused keyboard paths checked. Export text passed model assertions; downloaded file unverified because of the browser-tool limitation. New briefs, no matched control or universal uniqueness claim.
+
 ## Contributing a regression
 
 Provide the brief, expected observable behavior, actual artifact, and the specific failure. Prefer a narrow repair and a counterexample where the new rule should not apply. Do not grow a style blacklist from a single disliked result.

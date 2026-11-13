@@ -1,0 +1,68 @@
+{
+  "study": {
+    "desktop": [
+      1440,
+      1000,
+      1440,
+      2144
+    ],
+    "mobile": [
+      390,
+      844,
+      390,
+      3750
+    ],
+    "request": "A/B/C desktop; B and type comparison mobile",
+    "delivered": "Full-page study images in own case folder, all candidates and type comparison; no aesthetic feedback.",
+    "font_metadata": "Effective glyph source not exposed; returned limitation rather than claim based on CSS stack."
+  },
+  "preflight": {
+    "screens": [
+      "ui-desktop-initial.jpg",
+      "ui-mobile-initial.jpg",
+      "ui-mobile-detail.jpg",
+      "ui-mobile-return.jpg",
+      "ui-mobile-error.jpg",
+      "ui-mobile-review.jpg",
+      "ui-320-list.jpg",
+      "ui-320-form.jpg",
+      "ui-320-revised-undo.jpg"
+    ],
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "observed": "Loan required name/date, rejected date before13Nov with name retained; review cancel preserved initial record; confirm/reload persisted borrower/history; undo restored initial. Return/reload/undo restored Rui,10Nov and3days late. Accent-insensitive/code search, empty recovery, availability/maintenance restrictions. Escape returned form focus.",
+    "creator_revisions": "Skip link, success wording and mobile undo focus revised autonomously during preflight; reload and C04 return/reload/undo rechecked final revision, focus on object row. No evaluator source edits.",
+    "limits": "No full keyboard/screen-reader/storage-failure browser audit."
+  },
+  "final_review": {
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "document_width_equals_viewport": true,
+    "console_errors": [],
+    "sources": "Closed submission; no post-close product changes."
+  }
+}

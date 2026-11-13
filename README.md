@@ -18,6 +18,14 @@ An open Agent Skill for designing web and app experiences from the product's use
 
 There is no universal palette, required font, mandatory card layout, or random style picker. A restrained utility and an expressive cultural product should not inherit the same composition merely because the agent made both.
 
+## Independent v0.5 results
+
+[Report, source and screenshots](evals/results/independent-v05.md): Revez, Vereda and Minuto, from functional briefs in fresh contexts. No selected Impact or all-uppercase product names; type roles and compositions vary. Residual similarities remain: all preserve initial-capital names, and Vereda/Minuto use related pale lilac/plum palettes. Main flows, recovery, persistence and desktop/phone views were checked. TXT generation passed code checks; the downloaded file was not inspected. No universal-uniqueness or causal-improvement claim.
+
+## What changed in v0.5
+
+Typography and product naming are now separate choices: a prominent score, code or headline should not automatically dictate the mark. The skill checks available fonts and challenges habitual type decisions within a stable composition, using actual name, label and data content. It does not ban a face or letter case, impose a replacement pairing, or rotate through styles. Existing brands and small fixes remain protected.
+
 ## Independent v0.4 results
 
 [Report, source and screenshots](evals/results/independent-v04.md): Pódio, Véspera and Revela. Functional briefs only; autonomous selection after neutral captures. Palette and composition differ clearly in this sample. The old cream/green/Georgia and dot/icon mark bundle did not recur; Pódio and Revela still share Impact and uppercase marks. Typography and brand-construction diversity remains partial. Main paths, recovery and persistence were checked on desktop and phone.
